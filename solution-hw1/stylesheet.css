@@ -1,0 +1,58 @@
+.logo {
+    width: 400px;
+}
+
+div {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.title {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.galleryimage{
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+}
+
+.font {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.underline{
+    text-decoration: underline;
+}
+/*keep and see what it does*/
+
+.Style {
+    text-decoration: none;
+}
+
+.line {
+    text-transform: uppercase;
+}
+
+
+#originalCinnamonRollbox, #Applecinnamonrollbox, #Raisincinnamonrollbox, #Walnutcinnamonrollbox, #Double-chocolatecinnamonrollbox, #Strawberrycinnamonrollbox {
+    width: 406px;
+    margin: auto;
+    display: block;
+}
+
+#originalCinnamonRollbox:hover, #Applecinnamonrollbox:hover, #Raisincinnamonrollbox:hover, #Walnutcinnamonrollbox:hover, #Double-chocolatecinnamonrollbox:hover, #Strawberrycinnamonrollbox:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
