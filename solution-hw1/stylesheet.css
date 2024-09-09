@@ -5,8 +5,22 @@
 div {
     display: block;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-size: 14px;
 }
+
+.title {
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+.productitem{
+    display:block;
+    padding: 5px;
+    width:400px;
+
+}
+
 
 .highlight {
     background-color: yellow;
@@ -14,9 +28,9 @@ div {
     font-weight: bold;
 }
 
-.title {
-    margin-top: 60px;
-    font-size: 30px;
+a{ 
+    text-decoration: none;
+    color:black
 }
 
 .galleryimage{
@@ -32,13 +46,11 @@ div {
     margin-right: auto;
 }
 
-.underline{
-    text-decoration: underline;
-}
-/*keep and see what it does*/
-
-.Style {
-    text-decoration: none;
+.description{
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .line {
@@ -46,13 +58,97 @@ div {
 }
 
 
-#originalCinnamonRollbox, #Applecinnamonrollbox, #Raisincinnamonrollbox, #Walnutcinnamonrollbox, #Double-chocolatecinnamonrollbox, #Strawberrycinnamonrollbox {
+.Style {
+    text-decoration: none;
+}
+
+
+.selection {
+    width: 180px;
+    align-self: center;
+    border:2px solid black;
+}
+
+.productitem{
     width: 406px;
     margin: auto;
     display: block;
+    padding: 5px;
 }
 
-#originalCinnamonRollbox:hover, #Applecinnamonrollbox:hover, #Raisincinnamonrollbox:hover, #Walnutcinnamonrollbox:hover, #Double-chocolatecinnamonrollbox:hover, #Strawberrycinnamonrollbox:hover {
+.productitem:hover{
+    font-weight: bold;
+    background-color: yellow;
+}
+.productitem p{
+    margin: 2px;
+}
+
+hr{
+    border: 2px solid black;
+}
+
+.dropt{
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: 9%;
+    display: block;
+}
+/*could be fixed*/
+.together{
+    margin: auto;
+    width: 180px;
+    text-align: left;
+}
+.Cartimage {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.productin {
+    margin-bottom: 5px;
+}
+
+.Hline {
+    margin-top: 50px;
+    width: 750px;
+    boarder: 3px solid black;
+}
+
+
+.price{
+    font-size: 110%;
+    text-align: center;
+}
+
+#addtocartbutton {
     background-color: yellow;
     font-weight: bold;
+    font: 30px;
+    width: 110px;
+    height: 30px;
+    border: solid black;
+    align-items: center;
+}
+
+#checkoutbutton {
+    background-color: yellow;
+    font-weight: bold;
+    font: 30px;
+    width: 110px;
+    height: 30px;
+    border: solid black;
+    align-items: center;
+}
+
+.buttonbox {
+    font-weight: bold;
+    font: 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
 }
