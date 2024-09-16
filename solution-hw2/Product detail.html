@@ -5,56 +5,66 @@
         <title>Product detail</title>
       
         <meta charset="UTF-8">
-        <title>Product Gallery</title>
+        <title>Product Detail</title>
     </head>
 
-    
-      <a href = "./index.html">
-      <img src="../assets/logo/logo-01.svg" class = "logo">
-    </a>
-    <hr >
-    
-      <div class="headlines">
-        <div>
-          <a href = "./index.html" class = "Style line highlight">
-            products
-        </a>
+    <body>
+      <section>
+        <div class="topclogo">
+          <a href="./index.html">
+            <img src="../assets/logo/logo-01.svg" class="logo" alt="Logo">
+          </a>
         </div>
-        <div>
-          <a href = "./Product Shopping Cart.html" class = "Style line" > 
-            cart
-        </a> 
+      
+        <div class="topclass">
+          <div class="titles">
+            <div class="title11">
+              <a href="./index.html" class="Style line highlight">
+                products
+              </a>
+            </div>
+      
+            <div class="title22">
+              <a href="./Product Shopping Cart.html" class="Style line">
+                cart
+              </a>
+            </div>
+          </div>
+      
+          <hr class="topline">
+      
+          <div>
+            <p class="title">
+              Original Cinnamon Roll
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+      
 
-
-      <div>
-        <p class = "title">
-          Original Cinnamon Roll
-        </p>
-      </div>
-     
+     <section class="flexbox1">
       <div>
         <img src="../assets/products/original-cinnamon-roll.jpg" class="galleryimageD">
-        <p class = "description">
-          Customize our delicious, hand-made cinammon roll to your liking!
-        </p>
       </div>
        
+    <div class="flexboxright">
+      <div class = "description">
+        Customize our delicious, hand-made cinammon roll to your liking!
+      </div>
 
-  <div class="together">
-      <label class="dropt">Glazing:</label>
-        <select class="selection" id="option">
-          <option value="Keep original">Keep original</option>
-          <option value="Sugar milk">Sugar milk</option>
-          <option value="Vanilla milk">Vanilla milk</option>
-          <option value="Double chocolate">Double chocolate</option>
-        </select>
-  </div>
-        <br>
+        <div class="together">
+          <label class="dropt">Glazing:</label>
+            <select class="selection" id="option">
+              <option value="Keep original">Keep original</option>
+              <option value="Sugar milk">Sugar milk</option>
+              <option value="Vanilla milk">Vanilla milk</option>
+              <option value="Double chocolate">Double chocolate</option>
+            </select>
+         </div>
+            <br>
   
 
-  <div class="together">
+      <div class="together">
         <label class = "dropt"> Pack Size:</label>
            <select class="selection" id="option">
              <option value="1l">1</option>
@@ -69,5 +79,9 @@
           <div> $ 2.49</div>
           <button id = "addtocartbutton">Add to Cart</button>
       </div>
+    </div>
+
+  </section>
+
     </body>
   </html>
