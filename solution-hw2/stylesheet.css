@@ -150,6 +150,18 @@ hr{
     display: flex;
     justify-content: center;
     align-items: baseline;
+    margin-left: 90px;
+    
+}
+
+.buttonboxcart {
+    font-weight: bold;
+    font: 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 960px;
     
 }
 .removel{
@@ -175,6 +187,14 @@ section{
     justify-content: left;
 }
 
+.flexbox1f,.flexbox2f{
+    justify-content: space-evenly;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+
+}
 .topclass{
     flex-grow: 1;
 }
@@ -192,7 +212,8 @@ section{
 
 .flexboxright{
     margin-top: 200px;
-    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .description{
@@ -207,6 +228,7 @@ section{
 
 .Hline{
     display:flex;
+    margin-left: 310px;
 }
 
 .price{
@@ -222,13 +244,8 @@ section{
     display:flex;
     font-size: 130%;
     margin-top:78px;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
     margin-left:250px;
-}
-.buttonbox
-
-.label2{
-    text-align: right;
 }
 
 .cartout1,.cartout2{
@@ -258,3 +275,15 @@ section{
     align-items: center;
   }
   
+.label1{
+    display: flex;
+    gap: 30px;
+    margin-left: 520px;
+}
+
+.label2{
+    display: flex;
+    gap: 30px;
+    margin-left: 465px;
+    text-align: right;
+}
