@@ -4,9 +4,6 @@
 
 div {
     display: block;
-   /* text-align: center;*/
-    /*margin-bottom: 30px;*/
-   /* font-size: 15px;*/
 }
 
 .title {
@@ -63,8 +60,10 @@ a{
 
 .selection {
     width: 360px;
+    height: 40px;
     align-self: center;
-    border:2px solid black;
+    border:3px solid black;
+    font-size: 20px;
 }
 
 .productitem{
@@ -88,12 +87,12 @@ hr{
 }
 
 .dropt{
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 23px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: 9%;
     display: block;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .together{
@@ -116,6 +115,8 @@ hr{
     margin-top: 50px;
     width: 750px;
     boarder: 3px solid black;
+    display:flex;
+    margin-left: 310px;
 }
 
 
@@ -151,6 +152,7 @@ hr{
     justify-content: center;
     align-items: baseline;
     margin-left: 90px;
+    margin-top: 100px;
     
 }
 
@@ -211,7 +213,7 @@ section{
   }
 
 .flexboxright{
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -220,16 +222,11 @@ section{
     justify-content: space-around;
     width: 360px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     text-align: left;
     font-size: 30px
 }
 
-
-.Hline{
-    display:flex;
-    margin-left: 310px;
-}
 
 .price{
     display:flex;
@@ -244,7 +241,6 @@ section{
     display:flex;
     font-size: 130%;
     margin-top:78px;
-    /*justify-content: flex-end;*/
     margin-left:250px;
 }
 
