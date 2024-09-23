@@ -3,11 +3,13 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
         <title>Product detail</title>
-      
+        <script src="random-element.js" type = "text/javascript" defer></script>
+
         <meta charset="UTF-8">
         <title>Product Detail</title>
     </head>
 
+    
     <body>
       <section>
         <div class="topclogo">
@@ -15,7 +17,7 @@
             <img src="../assets/logo/logo-01.svg" class="logo" alt="Logo">
           </a>
         </div>
-      
+        
         <div class="topclass">
           <div class="titles">
             <div class="title11">
@@ -23,16 +25,16 @@
                 products
               </a>
             </div>
-      
+
             <div class="title22">
               <a href="./Product Shopping Cart.html" class="Style line">
                 cart
               </a>
             </div>
           </div>
-      
+
           <hr class="topline">
-      
+
           <div>
             <p class="title">
               Original Cinnamon Roll
@@ -54,11 +56,11 @@
 
         <div class="together">
           <label class="dropt">Glazing:</label>
-            <select class="selection" id="option">
-              <option value="Keep original">Keep original</option>
-              <option value="Sugar milk">Sugar milk</option>
-              <option value="Vanilla milk">Vanilla milk</option>
-              <option value="Double chocolate">Double chocolate</option>
+            <select class="selection" id="glazingOptions" >
+              <!-- <option>Keep original</option>
+              <option>Sugar milk</option>
+              <option>Vanilla milk</option>
+              <option>Double chocolate</option> -->
             </select>
          </div>
             <br>
@@ -66,17 +68,17 @@
 
       <div class="together">
         <label class = "dropt"> Pack Size:</label>
-           <select class="selection" id="option">
-             <option value="1l">1</option>
-             <option value="3">3</option>
-             <option value="6">6</option>
-             <option value="12">12</option>
+           <select class="selection" id="packSizeOptions" >
+             <!-- <option>1</option>
+             <option>3</option>
+             <option>6</option>
+             <option>12</option> -->
            </select>
         </div>
        <br>
        
         <div class = "buttonbox">
-          <div> $ 2.49</div>
+          <div id="display"> $ 2.49</div>
           <button id = "addtocartbutton">Add to Cart</button>
       </div>
     </div>
