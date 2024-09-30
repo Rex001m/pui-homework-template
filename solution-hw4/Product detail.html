@@ -3,12 +3,12 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
         <title>Product detail</title>
+        <script src="rollsData.js"></script>
         <script src="random-element.js" type = "text/javascript" defer></script>
 
         <meta charset="UTF-8">
         <title>Product Detail</title>
     </head>
-
     
     <body>
       <section>
@@ -76,47 +76,6 @@
     </div>
 
   </section>
-
-  <script src="rollsData.js"></script>
-  <script>
-  
-      const cart= []
-      const queryString = window.location.search;
-      const params = new URLSearchParams(queryString);
-      const rollType = params.get('roll');
-  
-      // Update the tilte
-      const detailName = document.querySelector(".title");
-      detailName.innerText = rollType + ' Cinnamon Roll';
-
-  
-      // Update the image
-      const detailImage = document.querySelector(".galleryimageD");
-      detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
-  
-      // Update the Price
-      const detailPrice = document.querySelector("#display");
-      detailPrice.innerText = "$" +rolls[rollType].basePrice;
- 
-
-
-
-      class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-     }
-    }
-
-    document.querySelector("#addtocartbutton").addEventListener('click',function(){
-    let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
-    cart.push(roll)
-    console.log(cart)
-    })
-
-  </script>
 
     </body>
   </html>

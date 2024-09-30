@@ -1,4 +1,23 @@
 
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');
+
+// Update the tilte
+const detailName = document.querySelector(".title");
+detailName.innerText = rollType + ' Cinnamon Roll';
+
+
+// Update the image
+const detailImage = document.querySelector(".galleryimageD");
+detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
+
+// Update the Price
+const detailPrice = document.querySelector("#display");
+detailPrice.innerText = "$" +rolls[rollType].basePrice;
+
+
+
 //Replace selection box
 const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
 const packSizeOptionsJava = ['1','3','6','12'];
@@ -18,8 +37,8 @@ for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
     option.textContent = packSizeOptionsJava[i];
     sizeSelect.add(option);
 }
-
 }
+
 populate();
 
 
@@ -43,7 +62,6 @@ let price = document.querySelector('#display');
 let selectedGlaze = glazingDropd.value;
 let selectedQuantity = packSizeDropd.value;
 
-
 function onDropDownChange(){
     selectedGlaze=glazingDropd.value;
     selectedQuantity=packSizeDropd.value;
@@ -55,10 +73,28 @@ function calculatePrice (){
     const packPrice =packSize[selectedQuantity];
     const basePrice = 2.49;
     finalPrice=(basePrice + glazingPrice)*packPrice
-   // display.textContent = `$${finalPrice.toFixed(2)} `;
+    display.textContent = `$${finalPrice.toFixed(2)}`;
 }
 
 glazingDropd.addEventListener("change",onDropDownChange);
 packSizeDropd.addEventListener("change", onDropDownChange)
 calculatePrice();
 
+
+    const cart= []
+
+
+      class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+     }
+    }
+
+    document.querySelector("#addtocartbutton").addEventListener('click',function(){
+    let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
+    cart.push(roll)
+    console.log(cart)
+    })
