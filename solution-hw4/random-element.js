@@ -71,7 +71,7 @@ function onDropDownChange(){
 function calculatePrice (){
     const glazingPrice = glazing[selectedGlaze];
     const packPrice =packSize[selectedQuantity];
-    const basePrice = 2.49;
+    const basePrice = Number (rolls[rollType].basePrice);
     finalPrice=(basePrice + glazingPrice)*packPrice
     display.textContent = `$${finalPrice.toFixed(2)}`;
 }
