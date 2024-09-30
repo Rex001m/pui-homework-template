@@ -1,42 +1,34 @@
 //hw4 starts
 
-//data base
-const rolls = {
-    "Original": {
-        "basePrice": 2.49,
-        "imageFile": "original-cinnamon-roll.jpg"
-    },
-    "Apple": {
-        "basePrice": 3.49,
-        "imageFile": "apple-cinnamon-roll.jpg"
-    },
-    "Raisin": {
-        "basePrice": 2.99,
-        "imageFile": "raisin-cinnamon-roll.jpg"
-    },
-    "Walnut": {
-        "basePrice": 3.49,
-        "imageFile": "walnut-cinnamon-roll.jpg"
-    },
-    "Double-Chocolate": {
-        "basePrice": 3.99,
-        "imageFile": "double-chocolate-cinnamon-roll.jpg"
-    },
-    "Strawberry": {
-        "basePrice": 3.99,
-        "imageFile": "strawberry-cinnamon-roll.jpg"
-    }    
-};
+const cart= []
 
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');
 
+// //try figuring out the extract info from the data base
+// //method 1
+// class Newpage {
 
+//     constructor(name,price,imagePath) {
+//       this.pageName = name;
+//       this.pagePrice = price;
+//       this.pageImagePath = imagePath;
+//     }
 
+// }
+// //method 2
+// function getCurrentRollInfo() {
+//     const currentRollName = rollNames[currentRollIndex]; // Get the current roll's name
+//     const currentRollData = rolls[currentRollName]; // Access the roll data using the name
+    
+//     // Extract name, price, and image path
+//     const name = currentRollName;
+//     const price = currentRollData.basePrice;
+//     const imagePath = currentRollData.imageFile;
+// }
 
-
-
-
-
-
+//hw4 end
 //Replace selection box
 const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
 const packSizeOptionsJava = ['1','3','6','12'];
@@ -99,5 +91,4 @@ function calculatePrice (){
 glazingDropd.addEventListener("change",onDropDownChange);
 packSizeDropd.addEventListener("change", onDropDownChange)
 calculatePrice();
-
 

@@ -35,6 +35,53 @@
 
           <hr class="topline">
 
+<!-- <script src="rollsData.js"></script>
+<script>
+
+    const cart= []
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const rollType = params.get('roll');
+
+    // Update the tilte
+    const detailName = document.querySelector(".title");
+    detailName.innerText = rollType + 'Cinnamon Roll';
+
+    // Update the image
+    const detailImage = document.querySelector(".galleryimageD");
+    detailImage.src =  'assets/products/'+ rollType +'.jpg';
+
+    // Update the Price
+    const detailPrice = document.querySelector(".display");
+    detailPrice.innerText = rolls[runningRollName].price; -->
+
+
+    // const rollNames = Object.keys(rolls); // Creating an array of roll names ["Original", "Apple", "Raisin", "Walnut", "Double-Chocolate", "Strawberry"]
+
+    // function getCurrentRollInfo() {
+    //     const runningRollName = rollNames[currentRollIndex]; // Get the current roll's name
+    //     console.log(runningRollName)
+    //     const runningRollData = rolls[runningRollName]; // Access the roll data using the name
+        
+    //     return {
+    //         name: runningRollName,
+    //         price: runningRollData.basePrice,
+    //         imagePath: runningRollData.imageFile
+    //     };
+    // }
+
+    // function updateRollInfo() {
+    //     const { name, price, imagePath } = getCurrentRollInfo();
+
+    //     // Update the DOM elements
+    //     document.getElementById('title').innerText = name;
+    //     document.getElementById('galleryimageD').src = imagePath;
+    //     document.getElementById('display').innerText = `Price: $${price.toFixed(2)}`;
+    // }
+
+    // updateRollInfo();
+</script>
+
           <div>
             <p class="title">
               Original Cinnamon Roll
@@ -57,10 +104,6 @@
         <div class="together">
           <label class="dropt">Glazing:</label>
             <select class="selection" id="glazingOptions" >
-              <!-- <option>Keep original</option>
-              <option>Sugar milk</option>
-              <option>Vanilla milk</option>
-              <option>Double chocolate</option> -->
             </select>
          </div>
             <br>
@@ -69,10 +112,6 @@
       <div class="together">
         <label class = "dropt"> Pack Size:</label>
            <select class="selection" id="packSizeOptions" >
-             <!-- <option>1</option>
-             <option>3</option>
-             <option>6</option>
-             <option>12</option> -->
            </select>
         </div>
        <br>
