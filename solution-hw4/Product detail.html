@@ -35,53 +35,6 @@
 
           <hr class="topline">
 
-<!-- <script src="rollsData.js"></script>
-<script>
-
-    const cart= []
-    const queryString = window.location.search;
-    const params = new URLSearchParams(queryString);
-    const rollType = params.get('roll');
-
-    // Update the tilte
-    const detailName = document.querySelector(".title");
-    detailName.innerText = rollType + 'Cinnamon Roll';
-
-    // Update the image
-    const detailImage = document.querySelector(".galleryimageD");
-    detailImage.src =  'assets/products/'+ rollType +'.jpg';
-
-    // Update the Price
-    const detailPrice = document.querySelector(".display");
-    detailPrice.innerText = rolls[runningRollName].price; -->
-
-
-    // const rollNames = Object.keys(rolls); // Creating an array of roll names ["Original", "Apple", "Raisin", "Walnut", "Double-Chocolate", "Strawberry"]
-
-    // function getCurrentRollInfo() {
-    //     const runningRollName = rollNames[currentRollIndex]; // Get the current roll's name
-    //     console.log(runningRollName)
-    //     const runningRollData = rolls[runningRollName]; // Access the roll data using the name
-        
-    //     return {
-    //         name: runningRollName,
-    //         price: runningRollData.basePrice,
-    //         imagePath: runningRollData.imageFile
-    //     };
-    // }
-
-    // function updateRollInfo() {
-    //     const { name, price, imagePath } = getCurrentRollInfo();
-
-    //     // Update the DOM elements
-    //     document.getElementById('title').innerText = name;
-    //     document.getElementById('galleryimageD').src = imagePath;
-    //     document.getElementById('display').innerText = `Price: $${price.toFixed(2)}`;
-    // }
-
-    // updateRollInfo();
-</script>
-
           <div>
             <p class="title">
               Original Cinnamon Roll
@@ -117,12 +70,53 @@
        <br>
        
         <div class = "buttonbox">
-          <div id="display"> $ 2.49</div>
+          <div id="display"> replace price</div>
           <button id = "addtocartbutton">Add to Cart</button>
       </div>
     </div>
 
   </section>
+
+  <script src="rollsData.js"></script>
+  <script>
+  
+      const cart= []
+      const queryString = window.location.search;
+      const params = new URLSearchParams(queryString);
+      const rollType = params.get('roll');
+  
+      // Update the tilte
+      const detailName = document.querySelector(".title");
+      detailName.innerText = rollType + ' Cinnamon Roll';
+
+  
+      // Update the image
+      const detailImage = document.querySelector(".galleryimageD");
+      detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
+  
+      // Update the Price
+      const detailPrice = document.querySelector("#display");
+      detailPrice.innerText = "$" +rolls[rollType].basePrice;
+ 
+
+
+
+      class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+     }
+    }
+
+    document.querySelector("#addtocartbutton").addEventListener('click',function(){
+    let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
+    cart.push(roll)
+    console.log(cart)
+    })
+
+  </script>
 
     </body>
   </html>
