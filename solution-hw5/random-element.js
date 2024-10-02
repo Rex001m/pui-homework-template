@@ -82,16 +82,32 @@ calculatePrice();
 
 
 //hw4
-    const cart= []
+    const cart= [] //since we already have a cart do we use the same cart for cart page?
 
 
       class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
+    constructor(rollImageURL, rollType, rollGlazing, packSize, basePrice) {
+        this.image=rollImageURL; //is this correct? how does it links? is this always gonna refer to the class?
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
+
+        this.updateElement();
      }
+
+     updateElement() {     // change and update
+        const cartItemImage = this.element.querySelector('.Cartimage');
+        const cartItemType = this.element.querySelector('.productin productName');
+        const cartItemGlaze= this.element.querySelector('.productin glaz');
+        const cartItemSize = this.element.querySelector('.productin siz');
+        const cartItemPrice = this.element.querySelector('.pricer');
+  
+        noteImageElement.src = this.noteImageURL;
+        noteTitleElement.innerText = this.noteTitle;
+        noteBodyElement.innerText = this.noteBody;
+        noteFooterElement.innerText = this.noteFooter;
+      }
     }
 
     document.querySelector("#addtocartbutton").addEventListener('click',function(){
