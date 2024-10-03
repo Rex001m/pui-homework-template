@@ -82,32 +82,33 @@ calculatePrice();
 
 
 //hw4
-    const cart= [] //since we already have a cart do we use the same cart for cart page?
+    const cart= []
 
 
       class Roll {
     constructor(rollImageURL, rollType, rollGlazing, packSize, basePrice) {
-        this.image=rollImageURL; //is this correct? how does it links? is this always gonna refer to the class?
+        this.image=rollImageURL; 
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
 
-        this.updateElement();
+        this.element =null
+       
      }
 
-     updateElement() {     // change and update
-        const cartItemImage = this.element.querySelector('.Cartimage');
-        const cartItemType = this.element.querySelector('.productin productName');
-        const cartItemGlaze= this.element.querySelector('.productin glaz');
-        const cartItemSize = this.element.querySelector('.productin siz');
-        const cartItemPrice = this.element.querySelector('.pricer');
+    //  updateElement() {     // change and update
+    //     const cartItemImage = this.element.querySelector('.Cartimage');
+    //     const cartItemType = this.element.querySelector('.productin productName');
+    //     const cartItemGlaze= this.element.querySelector('.productin glaz');
+    //     const cartItemSize = this.element.querySelector('.productin siz');
+    //     const cartItemPrice = this.element.querySelector('.pricer');
   
-        noteImageElement.src = this.noteImageURL;
-        noteTitleElement.innerText = this.noteTitle;
-        noteBodyElement.innerText = this.noteBody;
-        noteFooterElement.innerText = this.noteFooter;
-      }
+    //     noteImageElement.src = this.noteImageURL;
+    //     noteTitleElement.innerText = this.noteTitle;
+    //     noteBodyElement.innerText = this.noteBody;
+    //     noteFooterElement.innerText = this.noteFooter;
+    //   }
     }
 
     document.querySelector("#addtocartbutton").addEventListener('click',function(){
@@ -115,5 +116,89 @@ calculatePrice();
     cart.push(roll)
     console.log(cart)
     })
+    
+    const finalCheckoutCart = new Set(); 
 
 
+    function addNewItem(rollImageURL, rollType, rollGlazing, packSize, basePrice) {
+        const Item = new Roll(rollImageURL, rollType, rollGlazing, packSize, basePrice);
+        finalCheckoutCart.add(Item);
+      
+        return itemSet;
+      }
+
+      function createElement(roll) {
+        const template = document.querySelector('#cartTemplate');
+        const clone = template.content.cloneNode(true);
+        
+        roll.element = clone.querySelector('.cartItem'); 
+      
+        const btnDelete = itemSet.element.querySelector('.removel');
+        console.log(btnDelete);
+        btnDelete.addEventListener('click', () => {
+          deleteNote(roll);
+        });
+        const itemSetFinalElement = document.querySelector('#itemSet-list');
+        itemSetFinalElement.prepend(itemSet.element);
+
+        updateElement(itemSet);
+      }
+    
+    //   const detailName = document.querySelector(".title");
+    //   detailName.innerText = rollType + ' Cinnamon Roll';
+      
+      
+    //   // Update the image
+    //   const detailImage = document.querySelector(".galleryimageD");
+    //   detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
+      
+    //   // Update the Price
+    //   const detailPrice = document.querySelector("#display");
+    //   detailPrice.innerText = "$" +rolls[rollType].basePrice;
+      
+
+      function updateElement(item) {
+        const cartImageElement = item.element.querySelector('.Cartimage');
+        const cartTitleElement = item.element.querySelector('.productName');
+        const cartGlazeElement = item.element.querySelector('.glaz');
+        const cartSizeElement = item.element.querySelector('.siz');
+        const cartPriceElement = item.element.querySelector('.pricer');
+
+        // copy our notecard content over to the corresponding HTML elements
+        cartImageElement.src = item.image;
+        cartTitleElement.innerText = item.type;
+        cartGlazeElement.innerText = item.glazing;
+        cartSizeElement.innerText = item.size;
+        cartPriceElement.innerText = calculatePrice(item)
+      }
+      
+
+      function deleteNote(item) {
+        // remove the notecard DOM object from the UI
+        item.element.remove();
+        // remove the actual Notecard object from our set of notecards
+        finalCheckoutCart.delete(item);
+      }
+
+
+    const cartItemOne = addNewItem(
+        "./assets/products/original-cinnamon-roll.jpg",
+        "Original Cinnamon Row"
+        "Sugar Milk",
+        "pack Size: 1"
+        "baseprice"
+      );
+
+     const cartItemTwo = addNewItem(
+        "./assets/products/walnut-cinnamon-roll.jpg",
+        "Walnut Cinnamon Row"
+        "Vanilla Milk",
+        "pack Size: 12"
+        "baseprice"
+      );
+
+
+
+      for (const roll of finalCheckoutCart) {
+        createElement(roll);
+      }

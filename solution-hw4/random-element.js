@@ -22,6 +22,8 @@ detailPrice.innerText = "$" +rolls[rollType].basePrice;
 const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
 const packSizeOptionsJava = ['1','3','6','12'];
 
+
+
 function populate(){
 const glazingSelect = document.querySelector('#glazingOptions');
 
