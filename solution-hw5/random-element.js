@@ -80,8 +80,6 @@ glazingDropd.addEventListener("change",onDropDownChange);
 packSizeDropd.addEventListener("change", onDropDownChange)
 calculatePrice();
 
-
-//hw4
     const cart= []
 
 
@@ -96,19 +94,6 @@ calculatePrice();
         this.element =null
        
      }
-
-    //  updateElement() {     // change and update
-    //     const cartItemImage = this.element.querySelector('.Cartimage');
-    //     const cartItemType = this.element.querySelector('.productin productName');
-    //     const cartItemGlaze= this.element.querySelector('.productin glaz');
-    //     const cartItemSize = this.element.querySelector('.productin siz');
-    //     const cartItemPrice = this.element.querySelector('.pricer');
-  
-    //     noteImageElement.src = this.noteImageURL;
-    //     noteTitleElement.innerText = this.noteTitle;
-    //     noteBodyElement.innerText = this.noteBody;
-    //     noteFooterElement.innerText = this.noteFooter;
-    //   }
     }
 
     document.querySelector("#addtocartbutton").addEventListener('click',function(){
@@ -121,10 +106,10 @@ calculatePrice();
 
 
     function addNewItem(rollImageURL, rollType, rollGlazing, packSize, basePrice) {
-        const Item = new Roll(rollImageURL, rollType, rollGlazing, packSize, basePrice);
+        const item = new Roll(rollImageURL, rollType, rollGlazing, packSize, basePrice);
         finalCheckoutCart.add(Item);
       
-        return itemSet;
+        return item;
       }
 
       function createElement(roll) {
@@ -133,29 +118,17 @@ calculatePrice();
         
         roll.element = clone.querySelector('.cartItem'); 
       
-        const btnDelete = itemSet.element.querySelector('.removel');
+        const btnDelete = item.element.querySelector('.removel');
         console.log(btnDelete);
         btnDelete.addEventListener('click', () => {
           deleteNote(roll);
         });
         const itemSetFinalElement = document.querySelector('#itemSet-list');
-        itemSetFinalElement.prepend(itemSet.element);
+        itemSetFinalElement.prepend(item.element);
 
-        updateElement(itemSet);
+        updateElement(item);
       }
     
-    //   const detailName = document.querySelector(".title");
-    //   detailName.innerText = rollType + ' Cinnamon Roll';
-      
-      
-    //   // Update the image
-    //   const detailImage = document.querySelector(".galleryimageD");
-    //   detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
-      
-    //   // Update the Price
-    //   const detailPrice = document.querySelector("#display");
-    //   detailPrice.innerText = "$" +rolls[rollType].basePrice;
-      
 
       function updateElement(item) {
         const cartImageElement = item.element.querySelector('.Cartimage');
@@ -183,21 +156,35 @@ calculatePrice();
 
     const cartItemOne = addNewItem(
         "./assets/products/original-cinnamon-roll.jpg",
-        "Original Cinnamon Row"
+        "Original Cinnamon Row",
         "Sugar Milk",
-        "pack Size: 1"
+        "pack Size: 1",
         "baseprice"
       );
 
      const cartItemTwo = addNewItem(
         "./assets/products/walnut-cinnamon-roll.jpg",
-        "Walnut Cinnamon Row"
+        "Walnut Cinnamon Row",
         "Vanilla Milk",
-        "pack Size: 12"
+        "pack Size: 12",
         "baseprice"
       );
 
+      const cartItemThree = addNewItem(
+        "./assets/products/raisin-cinnamon-roll.jpg",
+        "Raisin Cinnamon Row",
+        "Sugar Milk",
+        "pack Size: 3",
+        "baseprice"
+      );
 
+      const cartItemFour = addNewItem(
+        "./assets/products/Apple-cinnamon-roll.jpg",
+        "Apple Cinnamon Row",
+        "Original",
+        "pack Size: 3",
+        "baseprice"
+      );
 
       for (const roll of finalCheckoutCart) {
         createElement(roll);
