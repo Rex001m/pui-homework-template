@@ -19,6 +19,7 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
+
 // Update the tilte
 const detailName = document.querySelector(".title");
 detailName.innerText = rollType + ' Cinnamon Roll';
@@ -31,6 +32,30 @@ detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
 // Update the Price
 const detailPrice = document.querySelector("#display");
 detailPrice.innerText = "$" +rolls[rollType].basePrice;
+
+//Replace selection box
+const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
+const packSizeOptionsJava = ['1','3','6','12'];
+
+function populate(){
+  const glazingSelect = document.querySelector('#glazingOptions');
+  
+  for (let i = 0; i < glazingOptionsJava.length; i=i+1) {
+      const option = document.createElement('option');
+      option.textContent = glazingOptionsJava[i];
+      glazingSelect.add(option);
+  }
+  
+  const sizeSelect = document.querySelector('#packSizeOptions');
+  for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
+      const option = document.createElement('option');
+      option.textContent = packSizeOptionsJava[i];
+      sizeSelect.add(option);
+  }
+  }
+  
+  
+  populate();
 
 let glazingDropd = document.querySelector('#glazingOptions');
 let packSizeDropd = document.querySelector('#packSizeOptions');
@@ -45,13 +70,12 @@ function onDropDownChange(){
   calculatePrice();
 }
 
-
 function calculatePrice (){
   const glazingPrice = glazing[selectedGlaze];
   const packPrice =packSize[selectedQuantity];
   const basePrice = Number (rolls[rollType].basePrice);
   finalPrice=(basePrice + glazingPrice)*packPrice
-  display.textContent = `$${finalPrice.toFixed(2)}`;
+  price.textContent = `$${finalPrice.toFixed(2)}`;
 }
 
 
@@ -59,29 +83,7 @@ glazingDropd.addEventListener("change",onDropDownChange);
 packSizeDropd.addEventListener("change", onDropDownChange)
 calculatePrice();
 
-//Replace selection box
-const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
-const packSizeOptionsJava = ['1','3','6','12'];
 
-function populate(){
-const glazingSelect = document.querySelector('#glazingOptions');
-
-for (let i = 0; i < glazingOptionsJava.length; i=i+1) {
-    const option = document.createElement('option');
-    option.textContent = glazingOptionsJava[i];
-    glazingSelect.add(option);
-}
-
-const sizeSelect = document.querySelector('#packSizeOptions');
-for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
-    const option = document.createElement('option');
-    option.textContent = packSizeOptionsJava[i];
-    sizeSelect.add(option);
-}
-}
-
-
-populate();
 
 document.querySelector("#addtocartbutton").addEventListener('click',function(){
   let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
@@ -159,7 +161,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         this.image=rollImageURL; 
         this.type = rollType;
         this.glazing =  rollGlazing;
-        this.size = packSize;
+        this.size = Number(packSize);
         this.basePrice = basePrice;
 
         this.element =null
@@ -206,9 +208,18 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
       function calculatePriceCart(item) {
         const glazingPrice = glazing[item.glazing];
         const packPrice = packSize[item.size];
-        const basePrice = Number(item.basePrice);
+        console.log(packSize[item.size]);
+        const basePrice =item.basePrice;
+        console.log("Glazing:", item.glazing);
+        console.log("Glazing Price:", glazing[item.type]);
+        // console.log(basePrice)
+        // console.log(packPrice)
+        // console.log(glazingPrice)
         return (basePrice + glazingPrice) * packPrice;
+        
     }
+
+
 
 // those elements are empty rn
       function updateElement(item) {
@@ -223,7 +234,8 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         cartTitleElement.innerText = item.type;
         cartGlazeElement.innerText = item.glazing;
         cartSizeElement.innerText = item.size;
-        cartPriceElement.innerText = "$" + calculatePriceCart(item);
+        cartPriceElement.innerText = "$" + calculatePriceCart(item).toFixed(2);
+        console.log(calculatePriceCart(item))
     }
       
 
@@ -232,38 +244,39 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         item.element.remove();
         // remove the actual Notecard object from our set of notecards
         finalCheckoutCart.delete(item);
+        calculateTotalPrice();
       }
 
 
     const cartItemOne = addNewItem(
         "../assets/products/original-cinnamon-roll.jpg",
-        "Original Cinnamon Row",
-        "Sugar Milk",
-        "pack Size; 1",
+        "Original Cinnamon",
+        "Sugar milk",
+        "1",
         2.49,
       );
 
      const cartItemTwo = addNewItem(
         "../assets/products/walnut-cinnamon-roll.jpg",
         "Walnut Cinnamon Row",
-        "Vanilla Milk",
-        "pack Size: 12",
+        "Vanilla milk",
+        "12",
         3.99,
       );
 
       const cartItemThree = addNewItem(
         "../assets/products/raisin-cinnamon-roll.jpg",
         "Raisin Cinnamon Row",
-        "Sugar Milk",
-        "pack Size: 3",
+        "Sugar milk",
+        "3",
         2.99,
       );
 
       const cartItemFour = addNewItem(
         "../assets/products/Apple-cinnamon-roll.jpg",
         "Apple Cinnamon Row",
-        "Original",
-        "pack Size: 3",
+        "Keep original",
+        "3",
         3.49,
       );
 
@@ -272,3 +285,16 @@ if(window.location.pathname.includes('/ProductShoppingCart.html')){
         createElement(roll);
       }
     }
+
+
+function calculateTotalPrice(){
+  let totalPrice = 0; 
+  for (const item of finalCheckoutCart) {
+      totalPrice += calculatePriceCart(item); 
+  }
+
+  const totalPriceElement = document.querySelector('.label2'); 
+  totalPriceElement.innerText = `$${totalPrice.toFixed(2)}`; 
+}
+
+calculateTotalPrice()
