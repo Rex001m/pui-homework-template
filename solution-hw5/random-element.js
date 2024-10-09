@@ -169,11 +169,6 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
      }
     }
 
-    // document.querySelector("#addtocartbutton").addEventListener('click',function(){
-    // let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
-    // cart.push(roll)
-    // })
-    
     const finalCheckoutCart = new Set(); 
 
 
@@ -210,13 +205,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         const packPrice = packSize[item.size];
         console.log(packPrice)
         console.log(glazingPrice)
-        // console.log(packSize[item.size]);
         const basePrice =item.basePrice;
-        // console.log("Glazing:", item.glazing);
-        // console.log("Glazing Price:", glazing[item.type]);
-        // console.log(basePrice)
-        // console.log(packPrice)
-        // console.log(glazingPrice)
         return (basePrice + glazingPrice) * packPrice;
     }
 
