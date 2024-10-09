@@ -7,10 +7,10 @@ const glazing= {
 
 // Price adaptations for pack size options
 const packSize= {
-   1: 1.00,
-   3: 3.00,
-   6: 5.00,
-   12: 10.00};
+   1: 1,
+   3: 3,
+   6: 5,
+   12: 10};
 
 
 //just for detail page func
@@ -208,15 +208,16 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
       function calculatePriceCart(item) {
         const glazingPrice = glazing[item.glazing];
         const packPrice = packSize[item.size];
-        console.log(packSize[item.size]);
+        console.log(packPrice)
+        console.log(glazingPrice)
+        // console.log(packSize[item.size]);
         const basePrice =item.basePrice;
-        console.log("Glazing:", item.glazing);
-        console.log("Glazing Price:", glazing[item.type]);
+        // console.log("Glazing:", item.glazing);
+        // console.log("Glazing Price:", glazing[item.type]);
         // console.log(basePrice)
         // console.log(packPrice)
         // console.log(glazingPrice)
         return (basePrice + glazingPrice) * packPrice;
-        
     }
 
 
@@ -233,7 +234,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         cartImageElement.src = item.image;
         cartTitleElement.innerText = item.type;
         cartGlazeElement.innerText = item.glazing;
-        cartSizeElement.innerText = item.size;
+        cartSizeElement.innerText = "Pack Size : " + item.size;
         cartPriceElement.innerText = "$" + calculatePriceCart(item).toFixed(2);
         console.log(calculatePriceCart(item))
     }
@@ -261,7 +262,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         "Walnut Cinnamon Row",
         "Vanilla milk",
         "12",
-        3.99,
+        3.49,
       );
 
       const cartItemThree = addNewItem(
