@@ -248,7 +248,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
 
      const cartItemTwo = addNewItem(
         "../assets/products/walnut-cinnamon-roll.jpg",
-        "Walnut Cinnamon Row",
+        "Walnut Cinnamon",
         "Vanilla milk",
         "12",
         3.49,
@@ -256,15 +256,15 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
 
       const cartItemThree = addNewItem(
         "../assets/products/raisin-cinnamon-roll.jpg",
-        "Raisin Cinnamon Row",
+        "Raisin Cinnamon",
         "Sugar milk",
         "3",
         2.99,
       );
 
       const cartItemFour = addNewItem(
-        "../assets/products/Apple-cinnamon-roll.jpg",
-        "Apple Cinnamon Row",
+        "../assets/products/apple-cinnamon-roll.jpg",
+        "Apple Cinnamon",
         "Keep original",
         "3",
         3.49,
