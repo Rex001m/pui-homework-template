@@ -1,4 +1,20 @@
+// Price adaptations for glazing options
+const glazing= { 
+  'Keep original': 0.00,
+  'Sugar milk': 0.00 ,
+  'Vanilla milk':0.50 ,
+  'Double chocolate': 1.50 };
 
+// Price adaptations for pack size options
+const packSize= {
+   1: 1.00,
+   3: 3.00,
+   6: 5.00,
+   12: 10.00};
+
+
+//just for detail page func
+if (window.location.pathname.includes('/Productdetial.html')){
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
@@ -16,7 +32,32 @@ detailImage.src =  '../assets/products/'+ rolls[rollType].imageFile;
 const detailPrice = document.querySelector("#display");
 detailPrice.innerText = "$" +rolls[rollType].basePrice;
 
+let glazingDropd = document.querySelector('#glazingOptions');
+let packSizeDropd = document.querySelector('#packSizeOptions');
+let price = document.querySelector('#display');
+let selectedGlaze = glazingDropd.value;
+let selectedQuantity = packSizeDropd.value;
 
+
+function onDropDownChange(){
+  selectedGlaze=glazingDropd.value;
+  selectedQuantity=packSizeDropd.value;
+  calculatePrice();
+}
+
+
+function calculatePrice (){
+  const glazingPrice = glazing[selectedGlaze];
+  const packPrice =packSize[selectedQuantity];
+  const basePrice = Number (rolls[rollType].basePrice);
+  finalPrice=(basePrice + glazingPrice)*packPrice
+  display.textContent = `$${finalPrice.toFixed(2)}`;
+}
+
+
+glazingDropd.addEventListener("change",onDropDownChange);
+packSizeDropd.addEventListener("change", onDropDownChange)
+calculatePrice();
 
 //Replace selection box
 const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
@@ -39,46 +80,76 @@ for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
 }
 }
 
+
 populate();
 
-
-// Price adaptations for glazing options
-const glazing= { 
-   'Keep original': 0.00,
-   'Sugar milk': 0.00 ,
-   'Vanilla milk':0.50 ,
-   'Double chocolate': 1.50 };
-
-// Price adaptations for pack size options
-const packSize= {
-    1: 1.00,
-    3: 3.00,
-    6: 5.00,
-    12: 10.00};
-
-let glazingDropd = document.querySelector('#glazingOptions');
-let packSizeDropd = document.querySelector('#packSizeOptions');
-let price = document.querySelector('#display');
-let selectedGlaze = glazingDropd.value;
-let selectedQuantity = packSizeDropd.value;
-
-function onDropDownChange(){
-    selectedGlaze=glazingDropd.value;
-    selectedQuantity=packSizeDropd.value;
-    calculatePrice();
+document.querySelector("#addtocartbutton").addEventListener('click',function(){
+  let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
+  cart.push(roll)
+  })
 }
 
-function calculatePrice (){
-    const glazingPrice = glazing[selectedGlaze];
-    const packPrice =packSize[selectedQuantity];
-    const basePrice = Number (rolls[rollType].basePrice);
-    finalPrice=(basePrice + glazingPrice)*packPrice
-    display.textContent = `$${finalPrice.toFixed(2)}`;
-}
+// //Replace selection box
+// const glazingOptionsJava = ['Keep original', 'Sugar milk', 'Vanilla milk', 'Double chocolate'];
+// const packSizeOptionsJava = ['1','3','6','12'];
 
-glazingDropd.addEventListener("change",onDropDownChange);
-packSizeDropd.addEventListener("change", onDropDownChange)
-calculatePrice();
+// function populate(){
+// const glazingSelect = document.querySelector('#glazingOptions');
+
+// for (let i = 0; i < glazingOptionsJava.length; i=i+1) {
+//     const option = document.createElement('option');
+//     option.textContent = glazingOptionsJava[i];
+//     glazingSelect.add(option);
+// }
+
+// const sizeSelect = document.querySelector('#packSizeOptions');
+// for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
+//     const option = document.createElement('option');
+//     option.textContent = packSizeOptionsJava[i];
+//     sizeSelect.add(option);
+// }
+// }
+
+// populate();
+
+
+// // Price adaptations for glazing options
+// const glazing= { 
+//    'Keep original': 0.00,
+//    'Sugar milk': 0.00 ,
+//    'Vanilla milk':0.50 ,
+//    'Double chocolate': 1.50 };
+
+// // Price adaptations for pack size options
+// const packSize= {
+//     1: 1.00,
+//     3: 3.00,
+//     6: 5.00,
+//     12: 10.00};
+
+// let glazingDropd = document.querySelector('#glazingOptions');
+// let packSizeDropd = document.querySelector('#packSizeOptions');
+// let price = document.querySelector('#display');
+// let selectedGlaze = glazingDropd.value;
+// let selectedQuantity = packSizeDropd.value;
+
+// function onDropDownChange(){
+//     selectedGlaze=glazingDropd.value;
+//     selectedQuantity=packSizeDropd.value;
+//     calculatePrice();
+// }
+
+// function calculatePrice (){
+//     const glazingPrice = glazing[selectedGlaze];
+//     const packPrice =packSize[selectedQuantity];
+//     const basePrice = Number (rolls[rollType].basePrice);
+//     finalPrice=(basePrice + glazingPrice)*packPrice
+//     display.textContent = `$${finalPrice.toFixed(2)}`;
+// }
+
+// glazingDropd.addEventListener("change",onDropDownChange);
+// packSizeDropd.addEventListener("change", onDropDownChange)
+// calculatePrice();
 
     const cart= []
 
@@ -96,54 +167,66 @@ calculatePrice();
      }
     }
 
-    document.querySelector("#addtocartbutton").addEventListener('click',function(){
-    let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
-    cart.push(roll)
-    console.log(cart)
-    })
+    // document.querySelector("#addtocartbutton").addEventListener('click',function(){
+    // let roll =new Roll(rollType,selectedGlaze,selectedQuantity,rolls[rollType].basePrice)
+    // cart.push(roll)
+    // })
     
     const finalCheckoutCart = new Set(); 
 
 
     function addNewItem(rollImageURL, rollType, rollGlazing, packSize, basePrice) {
         const item = new Roll(rollImageURL, rollType, rollGlazing, packSize, basePrice);
-        finalCheckoutCart.add(Item);
+        finalCheckoutCart.add(item);
       
+
         return item;
       }
 
-      function createElement(roll) {
+      function createElement(item) {
         const template = document.querySelector('#cartTemplate');
         const clone = template.content.cloneNode(true);
         
-        roll.element = clone.querySelector('.cartItem'); 
+        item.element = clone.querySelector('.cartItem'); 
+        console.log(item.element);
       
         const btnDelete = item.element.querySelector('.removel');
         console.log(btnDelete);
         btnDelete.addEventListener('click', () => {
-          deleteNote(roll);
+          deleteNote(item);
         });
-        const itemSetFinalElement = document.querySelector('#itemSet-list');
-        itemSetFinalElement.prepend(item.element);
 
+
+        const itemSetFinalElement = document.querySelector('#itemSet-list');
+        itemSetFinalElement.append(item.element);
+        console.log(item)
         updateElement(item);
       }
-    
 
+
+      function calculatePriceCart(item) {
+        const glazingPrice = glazing[item.glazing];
+        const packPrice = packSize[item.size];
+        const basePrice = Number(item.basePrice);
+        return (basePrice + glazingPrice) * packPrice;
+    }
+    
+// those elements are empty rn
       function updateElement(item) {
         const cartImageElement = item.element.querySelector('.Cartimage');
-        const cartTitleElement = item.element.querySelector('.productName');
-        const cartGlazeElement = item.element.querySelector('.glaz');
-        const cartSizeElement = item.element.querySelector('.siz');
+        const cartTitleElement = item.element.querySelector('.productin productName');
+        const cartGlazeElement = item.element.querySelector('.productin glaz');
+        const cartSizeElement = item.element.querySelector('.productin siz');
         const cartPriceElement = item.element.querySelector('.pricer');
+
 
         // copy our notecard content over to the corresponding HTML elements
         cartImageElement.src = item.image;
         cartTitleElement.innerText = item.type;
         cartGlazeElement.innerText = item.glazing;
         cartSizeElement.innerText = item.size;
-        cartPriceElement.innerText = calculatePrice(item)
-      }
+        cartPriceElement.innerText = "$" + calculatePriceCart(item);
+    }
       
 
       function deleteNote(item) {
@@ -158,8 +241,8 @@ calculatePrice();
         "./assets/products/original-cinnamon-roll.jpg",
         "Original Cinnamon Row",
         "Sugar Milk",
-        "pack Size: 1",
-        "baseprice"
+        "pack Size; 1",
+        "baseprice" //change it to baseprice
       );
 
      const cartItemTwo = addNewItem(
@@ -186,6 +269,9 @@ calculatePrice();
         "baseprice"
       );
 
-      for (const roll of finalCheckoutCart) {
+if(window.location.pathname.includes('/ProductShoppingCart.html')){
+        for (const roll of finalCheckoutCart) {
+          console.log("hi");
         createElement(roll);
       }
+    }
