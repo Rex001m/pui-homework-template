@@ -188,7 +188,6 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         const clone = template.content.cloneNode(true);
         
         item.element = clone.querySelector('.cartItem'); 
-        console.log(item.element);
       
         const btnDelete = item.element.querySelector('.removel');
         console.log(btnDelete);
@@ -199,7 +198,7 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
 
         const itemSetFinalElement = document.querySelector('#itemSet-list');
         itemSetFinalElement.append(item.element);
-        console.log(item)
+    
         updateElement(item);
       }
 
@@ -210,15 +209,14 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
         const basePrice = Number(item.basePrice);
         return (basePrice + glazingPrice) * packPrice;
     }
-    
+
 // those elements are empty rn
       function updateElement(item) {
         const cartImageElement = item.element.querySelector('.Cartimage');
-        const cartTitleElement = item.element.querySelector('.productin productName');
-        const cartGlazeElement = item.element.querySelector('.productin glaz');
-        const cartSizeElement = item.element.querySelector('.productin siz');
+        const cartTitleElement = item.element.querySelector('.productName');
+        const cartGlazeElement = item.element.querySelector('.glaz');
+        const cartSizeElement = item.element.querySelector('.siz');
         const cartPriceElement = item.element.querySelector('.pricer');
-
 
         // copy our notecard content over to the corresponding HTML elements
         cartImageElement.src = item.image;
@@ -238,40 +236,39 @@ document.querySelector("#addtocartbutton").addEventListener('click',function(){
 
 
     const cartItemOne = addNewItem(
-        "./assets/products/original-cinnamon-roll.jpg",
+        "../assets/products/original-cinnamon-roll.jpg",
         "Original Cinnamon Row",
         "Sugar Milk",
         "pack Size; 1",
-        "baseprice" //change it to baseprice
+        2.49,
       );
 
      const cartItemTwo = addNewItem(
-        "./assets/products/walnut-cinnamon-roll.jpg",
+        "../assets/products/walnut-cinnamon-roll.jpg",
         "Walnut Cinnamon Row",
         "Vanilla Milk",
         "pack Size: 12",
-        "baseprice"
+        3.99,
       );
 
       const cartItemThree = addNewItem(
-        "./assets/products/raisin-cinnamon-roll.jpg",
+        "../assets/products/raisin-cinnamon-roll.jpg",
         "Raisin Cinnamon Row",
         "Sugar Milk",
         "pack Size: 3",
-        "baseprice"
+        2.99,
       );
 
       const cartItemFour = addNewItem(
-        "./assets/products/Apple-cinnamon-roll.jpg",
+        "../assets/products/Apple-cinnamon-roll.jpg",
         "Apple Cinnamon Row",
         "Original",
         "pack Size: 3",
-        "baseprice"
+        3.49,
       );
 
 if(window.location.pathname.includes('/ProductShoppingCart.html')){
         for (const roll of finalCheckoutCart) {
-          console.log("hi");
         createElement(roll);
       }
     }
