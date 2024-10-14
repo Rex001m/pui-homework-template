@@ -1,5 +1,5 @@
 const rolls = {
-    "Original ": {
+    "Original": {
         "name": "Orinigal cinnimon roll",
         "basePrice": 2.49,
         "imageFile": "../assets/products/original-cinnamon-roll.jpg"
