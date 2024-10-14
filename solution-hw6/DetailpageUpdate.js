@@ -35,6 +35,7 @@ for (let i = 0; i < glazingOptionsJava.length; i=i+1) {
 }
 
 const sizeSelect = document.querySelector('#packSizeOptions');
+
 for (let i = 0; i < packSizeOptionsJava.length; i=i+1) {
     const option = document.createElement('option');
     option.textContent = packSizeOptionsJava[i];

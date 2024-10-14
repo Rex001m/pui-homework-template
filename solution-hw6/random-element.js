@@ -153,10 +153,10 @@ const packSize= {
 // packSizeDropd.addEventListener("change", onDropDownChange)
 // calculatePrice();
 
-    const cart= []
+const cart= []
 
 
-    class Roll {
+class Roll {
       constructor(rollImageURL,rollName, rollType, rollGlazing, packSize, basePrice) {
           this.image=rollImageURL; 
           this.name=rollName
@@ -168,120 +168,91 @@ const packSize= {
           this.element =null
        }
       }
-    const finalCheckoutCart = new Set(); 
+const finalCheckoutCart = new Set(); 
 
-
-    function addNewItem(rollImageURL,rollName, rollType, rollGlazing, packSize, basePrice) {
-        const item = new Roll(rollImageURL, rollName, rollType, rollGlazing, packSize, basePrice);
-        finalCheckoutCart.add(item);
+function addNewItem(rollImageURL,rollName, rollType, rollGlazing, packSize, basePrice) {
+  const item = new Roll(rollImageURL, rollName, rollType, rollGlazing, packSize, basePrice);
+  finalCheckoutCart.add(item);
       
-        return item;
-      }
+  return item;
+  }
 
-      function createElement(item) {
-        const template = document.querySelector('#cartTemplate');
-        const clone = template.content.cloneNode(true);
+function createElement(item) {
+  const template = document.querySelector('#cartTemplate');
+  const clone = template.content.cloneNode(true);
         
-        item.element = clone.querySelector('.cartItem'); 
+  item.element = clone.querySelector('.cartItem'); 
       
-        const btnDelete = item.element.querySelector('.removel');
-        console.log(btnDelete);
-        btnDelete.addEventListener('click', () => {
-          deleteNote(item);
-        });
+  const btnDelete = item.element.querySelector('.removel');
+  console.log(btnDelete);
+  btnDelete.addEventListener('click', () => {
+    deleteNote(item);
+  });
 
 
-        const itemSetFinalElement = document.querySelector('#itemSet-list');
-        itemSetFinalElement.append(item.element);
+  const itemSetFinalElement = document.querySelector('#itemSet-list');
+  itemSetFinalElement.append(item.element);
     
-        updateElement(item);
-      }
+    updateElement(item);
+  }
 
 
-      function calculatePriceCart(item) {
-        const glazingPrice = glazing[item.glazing];
-        const packPrice = packSize[item.size];
-        console.log(packPrice)
-        console.log(glazingPrice)
-        const basePrice =item.basePrice;
-        return (basePrice + glazingPrice) * packPrice;
+  function calculatePriceCart(item) {
+    const glazingPrice = glazing[item.glazing];
+    const packPrice = packSize[item.size];
+
+    const basePrice =item.basePrice;
+      return (basePrice + glazingPrice) * packPrice;
     }
 
 
 
 // those elements are empty rn
-      function updateElement(item) {
-        const cartImageElement = item.element.querySelector('.Cartimage');
-        const cartTitleElement = item.element.querySelector('.productName');
-        const cartGlazeElement = item.element.querySelector('.glaz');
-        const cartSizeElement = item.element.querySelector('.siz');
-        const cartPriceElement = item.element.querySelector('.pricer');
+function updateElement(item) {
+  const cartImageElement = item.element.querySelector('.Cartimage');
+  const cartTitleElement = item.element.querySelector('.productName');
+  const cartGlazeElement = item.element.querySelector('.glaz');
+  const cartSizeElement = item.element.querySelector('.siz');
+  const cartPriceElement = item.element.querySelector('.pricer');
 
-        // copy our notecard content over to the corresponding HTML elements
-        cartImageElement.src = item.image;
-        console.log(item.image)
-        cartTitleElement.innerText = item.type;
-        cartGlazeElement.innerText = item.glazing;
-        cartSizeElement.innerText = "Pack Size : " + item.size;
-        cartPriceElement.innerText = "$" + calculatePriceCart(item).toFixed(2);
-        console.log(calculatePriceCart(item))
-    }
+// copy our notecard content over to the corresponding HTML elements
+  cartImageElement.src = item.image;
+  console.log(item.image)
+  cartTitleElement.innerText = item.type;
+  cartGlazeElement.innerText = item.glazing;
+  cartSizeElement.innerText = "Pack Size : " + item.size;
+  cartPriceElement.innerText = "$" + calculatePriceCart(item).toFixed(2);
+  console.log(calculatePriceCart(item))
+  }
       
 
-      function deleteNote(item) {
-        // remove the notecard DOM object from the UI
-        item.element.remove();
-        // remove the actual Notecard object from our set of notecards
-        finalCheckoutCart.delete(item);
-        let savedCart=JSON.parse (localStorage.getItem('cart'))
-        let type=item.type
-        for (let i =0;i<savedCart.length;i++){
-          if(savedCart[i].type==type){
-            savedCart.splice(i,1)
-            break
-          }
-        }
-        localStorage.setItem('cart',JSON.stringify(savedCart))
+function deleteNote(item) {
+  // remove the notecard DOM object from the UI
+  item.element.remove();
+  // remove the actual Notecard object from our set of notecards
+  finalCheckoutCart.delete(item);
+  let savedCart=JSON.parse (localStorage.getItem('cart'))
+  let type=item.type
+
+  for (let i =0;i<savedCart.length;i++){
+    if(savedCart[i].type==type){
+      savedCart.splice(i,1)
+      break
+       }
+    }
+        
+    localStorage.setItem('cart',JSON.stringify(savedCart))
         console.log(localStorage.getItem('cart'))
         calculateTotalPrice();
-      }
+   }
 
 
-    // const cartItemOne = addNewItem(
-    //     "../assets/products/original-cinnamon-roll.jpg",
-    //     "Original Cinnamon",
-    //     "Sugar milk",
-    //     "1",
-    //     2.49,
-    //   );
-
-    //  const cartItemTwo = addNewItem(
-    //     "../assets/products/walnut-cinnamon-roll.jpg",
-    //     "Walnut Cinnamon",
-    //     "Vanilla milk",
-    //     "12",
-    //     3.49,
-    //   );
-
-    //   const cartItemThree = addNewItem(
-    //     "../assets/products/raisin-cinnamon-roll.jpg",
-    //     "Raisin Cinnamon",
-    //     "Sugar milk",
-    //     "3",
-    //     2.99,
-    //   );
-
-    //   const cartItemFour = addNewItem(
-    //     "../assets/products/apple-cinnamon-roll.jpg",
-    //     "Apple Cinnamon",
-    //     "Keep original",
-    //     "3",
-    //     3.49,
-    //   );
+    
 
 if(window.location.pathname.includes('/ProductShoppingCart.html')){
-        let savedCart=JSON.parse (localStorage.getItem('cart'))
-        for (const roll of savedCart) {
+      let savedCart=JSON.parse (localStorage.getItem('cart'))
+
+      for (const roll of savedCart) {
         createElement(roll);
       }
     }
