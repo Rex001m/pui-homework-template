@@ -174,28 +174,38 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1*
 
-![title for sketch1](images/sketch1.png)
+![title for sketch1](./images/design1.JPG)
 
-Add a few sentences about your design. Briefly state the motivation of each project idea. Example questions to answer:
+This is my first proposal for the portfolio design. It is mainly focused on page transitions and page linking. You will start the portfolio with a loading screen which includes the loading percentage and a brief description of myself. Then it will bring you to the main page which includes a header that stays on the top of the page. In the header you may see that description again and a selection of categories (about, work, resume, and contact). If you click on any of the categories, you will be taken to the related page. If you scroll down on the main page, you can see the vision statement, the About section that introduces my background as a designer, and ways to contact me. When you click on the work section, it will bring you to see the subcategories, current work, and previous work. If clicked, it will bring you to the linked gallery page. The main interaction that takes place in this design is the transition between pages and how one-page links to another. 
 
-* What is the basic idea of your final project? (1-2 sentences)  
-* How do you plan to make your design interactive and engaging?  
-* How do you plan to make your design accessible?  
-* What information do you specifically want to convey and include on your website?
 
 ### *Idea 2*
+![title for sketch1](./images/design2.JPG)
 
-…
+This is my second proposal for the portfolio design. Unlike the first one, this one was simplified into one main page so that users do not have to go through a complex process of navigation. This might be seen as an interactive resume. The site will first start with a loading screen that shows the loading percentage, a description of myself, and my vision statement. Once it is fully loaded, the loading number will turn into a “Start” button that can be clicked to bring it to the main page. On the main page, there will be a header on the top that includes, About, Work, and Contact. On the page, it shows the category information accordingly. For the work section, it will showcase a selection of my highlighted works and subcategories of UI/UX and industrial design. 
+
 
 ### *Idea 3*
 
-…
+![title for sketch1](./images/design3.JPG)
+
+This is my third design, which takes a more creative and innovative approach to user navigation. The main concept revolves around a scrolling ball that users can control seamlessly using either a trackpad or keyboard shortcuts. This unique feature allows for an engaging and intuitive browsing experience, as users can easily scroll forward and backward through different sections of the site.
+
+The journey begins with the About section, providing a personal introduction that sets the stage for what follows. This is followed by my vision statement, which outlines my goals and aspirations in a compelling manner. The design then transitions to showcase my work, displayed individually and in chronological order. This chronological presentation not only highlights my growth and development over time but also tells a story about my evolving skills and experiences. Finally, users will find my contact information, easily accessible to facilitate communication. This structured yet dynamic flow encourages users to immerse themselves in my narrative while navigating through the content.
 
 ## Feedback Summary
 
-Summarize all the critiques you received during the lab session (\~300 words). 
+From the critique, I have learned the importance of including keyboard shortcuts in my designs. While many users today prefer using a trackpad or a mouse to navigate through websites, it's essential to recognize that the keyboard serves as a vital alternative. This is especially true for elderly users or those with disabilities, for whom keyboard shortcuts can significantly enhance accessibility and overall user experience.
+
+Moreover, I received valuable feedback on my first and second designs, which, while effective, resembled resumes more than engaging web interfaces. To make my designs more captivating, I should consider incorporating a wider array of interactive elements. Interactions don't need to be limited to basic effects, such as pop-outs or color changes upon hovering; there's an opportunity to think creatively about user engagement. For instance, I could explore audio interactions that add another layer of depth, or even consider animating the entire screen in a way that captures users’ attention and makes the experience more immersive. By expanding my approach to interaction design, I can create a more dynamic and inclusive environment that caters to a broader audience.
+
+
 
 ## Feedback Digestion
 
-Digest the feedback you got in the lab (\~300 words). Indicate which critique you will act on in your next design and why you chose to incorporate/dismiss pieces of critique.
 
+After the critique session, I feel much more confident in pursuing my second design idea, as it garnered the most positive feedback from my peers. This response has reinforced my belief that it has the potential to resonate well with users. I plan to incorporate keyboard shortcuts thoughtfully, aligning them with specific functions to enhance usability. For instance, the up and down arrow keys can serve as direct replacements for scrolling with the trackpad, making navigation smoother and more intuitive. Additionally, I can implement number keys to allow users to jump to corresponding sections or pages, further streamlining the browsing experience.
+
+To enrich the design, I will also focus on adding more interactive elements. Color will play a significant role in this approach. For example, if the portfolio's color theme is centered around vibrant orange, I envision an interaction where hovering over a text element triggers an orange background to appear, creating a visually cohesive effect. When a user clicks on that text, the page will transition to a full orange screen before revealing the content, adding a layer of excitement to the navigation.
+
+Furthermore, to make specific sections more engaging, I plan to incorporate animations that relate directly to the content. For instance, when discussing my ski helmet design, I could showcase an animation of a skier gracefully navigating down a slope, visually representing the product in action. Similarly, when I delve into my musical projects, I could include background music that complements the discussion, enriching the overall experience and drawing users deeper into my creative world. These enhancements will not only make my portfolio more dynamic but also create a memorable interaction that highlights my unique style and skills.
