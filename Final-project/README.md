@@ -77,6 +77,8 @@ Copy all the content under the [ChatGPT Usage](#chatgpt-usage) section to answer
 
 Document the changes and progress of your project. How have you followed or changed your implementation & GenAI use plan and why? Remember to commit your code to save your progress.
 
+
+
 ## Implementation Plan Updates
 
 - [ ] ...
@@ -98,75 +100,49 @@ Briefly restate your motivation and a short description of your project.
 ## High-Fi Prototypes
 
 ### *Prototype 1*
+This is a design for my portfolio. It mainly highlights the projects I have done. The design is aiming for a simplistic approach so the user would not get lost in navigation. There are four main sections: profile, work, resume, and contact. 
 
-![title for prototype1](images/prototype1.png)
+![prototype1](images/old1.png)
+![prototype2](images/old2.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+The first design uses a numerical loading screen and the second design uses a visual, color change, loading screen. The layout of the main page is also slightly different. Although the designs currently look a bit simple, there will be animations that separate each section and interactive elements when the viewer interacts with the page. 
 
-### *Prototype 2*
-
-…
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
+I scheduled meetings with the participants who were interested in my portfolio. I would ask each participant what they typically want to see in a portfolio. Then, I would start the prototype for them and observe how they could interact with it. Ultimately, I would ask them about their feedback and possible iterations. The feedback they gave was very constructive. Firstly, it was suggested that the resume should be on a separate page because it is usually seen as a separate document. Secondly, they found the Figma demo hard to follow since the sections are not separated. However, this should not be the problem if interactive animations are applied. Thirdly, for the overall layout, they suggested I should use the same font so it is not too overwhelming and shows a uniform design. Fourthly, there should be more visual hints on the main page because they might not know what to do at first. Filthy, for the work section make sure all three sections are in the same hierarchy so they do not look like subcategories. 
+
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![updated prototype1](images/new1.png)
+![updated prototype2](images/new2.png)
+Here is the updated version of my designs. For those designs, the work section was redesigned, the slide bar was included, font sizes were changed, and the resume was moved to another page. 
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+During the lab, I did not receive much feedback. It was mentioned that the size text is a bit too big and it bit too much. I will consider that feedback in refining my designs. 
+
+
 
 ## Milestones
 
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
+Before going straight into codes, I wish to explore the libraries more. I did some research beforehand but there is more to learn. From now until November 15th, I will do more research on the libraries and get started on my HTML. From November 15th to 22nd, I will finish up HTML and CSS, and from November 22nd to December 6th, I will finish Javascript and implement those libraries. Since I am working on a personal portfolio, I am considering mainly using GSAP and ScrollReveal; those libraries would be available to perform most of my functionalities. I also use Anime.js, Three.js, and Pixijs for any missing functionalities. 
+
 
 ### *Implementation Plan*
 
-- [ ] Week 9 Oct 28 \- Nov 1:
-  - [X] FP1 due
-  - [ ] ...
-  
-- [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+Before going straight into codes, I wish to explore the libraries more. I did some research beforehand but there is more to learn. From now until November 15th, I will do more research on the libraries and get started on my HTML. From November 15th to 22nd, I will finish up HTML and CSS, and from November 22nd to December 6th, I will finish Javascript and implement those libraries. 
 
-- [ ] Week 11 Nov 11 \- Nov 15:  
-- [ ] Week 12 Nov 18 \- Nov 22:   
-- [ ] Week 13 Nov 25 \- Nov 29:  
-
-  - [ ] Thanksgiving  
-- [ ] Week 14 Dec 2 \- Dec 6:  
-  - [ ] FP4 due 
 
 ### *Libraries and Other Components*
 
-List the JS libraries and other components (if applicable) that you plan to use. 
-* 
+Since I am working on a personal portfolio, I am considering mainly using GSAP and ScrollReveal; those libraries would be available to perform most of my functionalities. I also use Anime.js, Three.js, and Pixijs for any missing functionalities. 
 
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
-
-### *Tool Use*
-
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
-* ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
-* Gemini  
-* Copilot  
-* V0
-* ...
-
-### *Responsible Use*
-
-How would you use Generative AI responsibly? 
-
----
+Generative AI can definitely be helpful when it comes to this project. To start the project, I may use it to search for possible libraries and ways to add them to my code. When I am facing problems adding one, I can use generative AI as a private tutor to teach me step by step. I may also use it to help me debug or give me constructive feedback. However, Generative AI would not be able to help me understand the contents. Since adding libraries is a new concept, I should go over the codes generated and understand them line by line. To use it responsibly, I should always disclose when using AI to generate content or solutions, ensuring others understand the source of information and validate the information provided by AI.
 
 # **FP1 \- Proposal for Critique**
 
@@ -174,20 +150,20 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1*
 
-![title for sketch1](./images/design1.JPG)
+![Idea 1 sketches](./images/design1.JPG)
 
 This is my first proposal for the portfolio design. It is mainly focused on page transitions and page linking. You will start the portfolio with a loading screen which includes the loading percentage and a brief description of myself. Then it will bring you to the main page which includes a header that stays on the top of the page. In the header you may see that description again and a selection of categories (about, work, resume, and contact). If you click on any of the categories, you will be taken to the related page. If you scroll down on the main page, you can see the vision statement, the About section that introduces my background as a designer, and ways to contact me. When you click on the work section, it will bring you to see the subcategories, current work, and previous work. If clicked, it will bring you to the linked gallery page. The main interaction that takes place in this design is the transition between pages and how one-page links to another. 
 
 
 ### *Idea 2*
-![title for sketch1](./images/design2.JPG)
+![Idea 2 sketches](./images/design2.JPG)
 
 This is my second proposal for the portfolio design. Unlike the first one, this one was simplified into one main page so that users do not have to go through a complex process of navigation. This might be seen as an interactive resume. The site will first start with a loading screen that shows the loading percentage, a description of myself, and my vision statement. Once it is fully loaded, the loading number will turn into a “Start” button that can be clicked to bring it to the main page. On the main page, there will be a header on the top that includes, About, Work, and Contact. On the page, it shows the category information accordingly. For the work section, it will showcase a selection of my highlighted works and subcategories of UI/UX and industrial design. 
 
 
 ### *Idea 3*
 
-![title for sketch1](./images/design3.JPG)
+![Idea 3 Sketches](./images/design3.JPG)
 
 This is my third design, which takes a more creative and innovative approach to user navigation. The main concept revolves around a scrolling ball that users can control seamlessly using either a trackpad or keyboard shortcuts. This unique feature allows for an engaging and intuitive browsing experience, as users can easily scroll forward and backward through different sections of the site.
 
