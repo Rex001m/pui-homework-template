@@ -102,8 +102,8 @@ Briefly restate your motivation and a short description of your project.
 ### *Prototype 1*
 This is a design for my portfolio. It mainly highlights the projects I have done. The design is aiming for a simplistic approach so the user would not get lost in navigation. There are four main sections: profile, work, resume, and contact. 
 
-![prototype1](./images/old1.png)
-![prototype2](./images/old2.png)
+![prototype1](./images/old1.PNG)
+![prototype2](./images/old2.PNG)
 
 The first design uses a numerical loading screen and the second design uses a visual, color change, loading screen. The layout of the main page is also slightly different. Although the designs currently look a bit simple, there will be animations that separate each section and interactive elements when the viewer interacts with the page. 
 
@@ -115,8 +115,8 @@ I scheduled meetings with the participants who were interested in my portfolio. 
 
 ## Updated Designs
 
-![updated prototype1](./images/new1.png)
-![updated prototype2](./images/new2.png)
+![updated prototype1](./images/new1.PNG)
+![updated prototype2](./images/new2.PNG)
 Here is the updated version of my designs. For those designs, the work section was redesigned, the slide bar was included, font sizes were changed, and the resume was moved to another page. 
 
 ## Feedback Summary
