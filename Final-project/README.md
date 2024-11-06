@@ -103,7 +103,7 @@ Briefly restate your motivation and a short description of your project.
 This is a design for my portfolio. It mainly highlights the projects I have done. The design is aiming for a simplistic approach so the user would not get lost in navigation. There are four main sections: profile, work, resume, and contact. 
 
 ![prototype1](./images/old1.PNG)
-![prototype2](./images/old2.PNG)
+![prototype2](./images/old2.png)
 
 The first design uses a numerical loading screen and the second design uses a visual, color change, loading screen. The layout of the main page is also slightly different. Although the designs currently look a bit simple, there will be animations that separate each section and interactive elements when the viewer interacts with the page. 
 
