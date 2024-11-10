@@ -1,0 +1,40 @@
+
+/* Style for the entire page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  /* Loading screen styles */
+  #loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  /* Style for the loading text */
+  #loading-text {
+    font-weight: bold;
+  }
+  
+  /* Main content (hidden by default) */
+  #main-content {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+  
