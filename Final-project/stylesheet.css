@@ -10,8 +10,20 @@ body {
     background-color: #f7f7f7;
   }
   
-  /* Loading screen styles */
-  #loading-screen {
+ /* Position for #startVision */
+#startVision {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  margin-left: 60%;
+  font-size: clamp(5px, 5vw, 12px);
+  color: #777;
+  text-align: right;
+}
+
+/* Loading screen styles */
+#loading-screen {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,21 +32,95 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 9999;
-    font-size: 3rem;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* z-index: 9999; */
+    font-size: 15rem;
     color: #333;
-  }
+}
   
-  /* Style for the loading text */
-  #loading-text {
+/* Style for the loading text */
+#loading-text {
     font-weight: bold;
-  }
+}
   
-  /* Main content (hidden by default) */
-  #main-content {
+/* Main content (hidden by default) */
+#startIcon {
     display: block;
     padding: 20px;
     text-align: center;
-  }
+}
+
+/* Styling for the "Start" text */
+#startText {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #333;
+}
   
+/* Position for the h3 element in the bottom-left corner */
+#startDescription {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 12px;
+    color: #777;
+    text-align: left;
+}
+
+
+  /* Main Page */
+
+  /* Style for the body to make sure content is not hidden behind the top bar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 60px; /* Add space for the fixed top bar */
+}
+
+/* Top bar styles */
+#topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #DCDCDC;
+  color: white;
+  display: flex;
+  justify-content: space-between;  /* Space out the logo and links */
+  align-items: center;  /* Center the content vertically */
+  padding: 10px 20px;  /* Padding around the bar */
+  z-index: 1000;  /* Make sure the top bar stays on top of other content */
+}
+
+#logo {
+  height: 40px; 
+  width: auto;
+}
+
+#topBarLinks {
+  display: flex;
+  gap: 20px; 
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#topBarLinks a:hover {
+  text-decoration: none;
+  color:black
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#mainVision{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20%;
+  font-size: 3.5rem;
+}
