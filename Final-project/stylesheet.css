@@ -42,22 +42,19 @@ body {
 #loading-text {
     font-weight: bold;
 }
-  
-/* Main content (hidden by default) */
+
 #startIcon {
     display: block;
     padding: 20px;
     text-align: center;
 }
 
-/* Styling for the "Start" text */
 #startText {
     font-size: 8rem;
     font-weight: bold;
     color: #333;
 }
   
-/* Position for the h3 element in the bottom-left corner */
 #startDescription {
     position: absolute;
     bottom: 0;
@@ -87,9 +84,9 @@ body {
   background-color: #DCDCDC;
   color: white;
   display: flex;
-  justify-content: space-between;  /* Space out the logo and links */
-  align-items: center;  /* Center the content vertically */
-  padding: 10px 20px;  /* Padding around the bar */
+  justify-content: space-between; 
+  align-items: center;  
+  padding: 10px 20px;  
   z-index: 1000;  /* Make sure the top bar stays on top of other content */
 }
 
