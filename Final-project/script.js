@@ -20,34 +20,34 @@
   //Update speed
   let loadingInterval = setInterval(updateLoadingScreen, 20);
 
-  //Import GSAP library
-  import { gsap } from "gsap";
-  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-  gsap.registerPlugin(ScrollToPlugin);
+  // //Import GSAP library
+  // import { gsap } from "gsap";
+  // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+  // gsap.registerPlugin(ScrollToPlugin);
 
-  gsap.to("#projects",{
-    duration:3,
-    rotation:360,
-    scrollTrigger:{
-      trigger:"#projects",
-      start: "top center",  
-      end: "bottom center",
-      markers: true,
-      scrub: true
-    }
-  })
+  // gsap.to("#projects",{
+  //   duration:3,
+  //   rotation:360,
+  //   scrollTrigger:{
+  //     trigger:"#projects",
+  //     start: "top center",  
+  //     end: "bottom center",
+  //     markers: true,
+  //     scrub: true
+  //   }
+  // })
 
 
-  gsap.to("#profilePic",{
-    duration:3,
-    rotation:360,
-    scrollTrigger:{
-      trigger:"#profilePic",
-      start: "top center",  
-      end: "bottom center",
-      markers: true,
-      scrub: true
-    }
-  })
+  // gsap.to("#profilePic",{
+  //   duration:3,
+  //   rotation:360,
+  //   scrollTrigger:{
+  //     trigger:"#profilePic",
+  //     start: "top center",  
+  //     end: "bottom center",
+  //     markers: true,
+  //     scrub: true
+  //   }
+  // })
 
  
