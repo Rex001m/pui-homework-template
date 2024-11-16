@@ -1,4 +1,6 @@
-
+// Check if the current URL matches the target URL
+if (window.location.href.endsWith('index.html')) {
+  console.log(window.location.href)
 
   // Function to simulate the loading progress
   let currentProgress = 0;
@@ -19,10 +21,10 @@
   }
   //Update speed
   let loadingInterval = setInterval(updateLoadingScreen, 20);
-
+}
   // //Import GSAP library
   // import { gsap } from "gsap";
-  // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+  // import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
   // gsap.registerPlugin(ScrollToPlugin);
 
   // gsap.to("#projects",{
@@ -38,16 +40,16 @@
   // })
 
 
-  // gsap.to("#profilePic",{
-  //   duration:3,
-  //   rotation:360,
-  //   scrollTrigger:{
-  //     trigger:"#profilePic",
-  //     start: "top center",  
-  //     end: "bottom center",
-  //     markers: true,
-  //     scrub: true
-  //   }
-  // })
+  // // gsap.to("#profilePic",{
+  // //   duration:3,
+  // //   rotation:360,
+  // //   scrollTrigger:{
+  // //     trigger:"#profilePic",
+  // //     start: "top center",  
+  // //     end: "bottom center",
+  // //     markers: true,
+  // //     scrub: true
+  // //   }
+  // // })
 
  
