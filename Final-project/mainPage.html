@@ -5,6 +5,8 @@
   <meta name="mainPage" content="width=device-width, initial-scale=1.0">
   <title>main page</title>
   <link rel="stylesheet" href="stylesheet.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 
@@ -12,11 +14,11 @@
   <!-- Top Bar -->
   <div id="topBar">
     <img src="../Final-project/images/logo.png" alt="Logo" id="logo">
-    <div id="topBarlinks">
+    <div class="topBarLinks">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="resume.html">Resume</a>
+      <a href="../Final-project/images/Resume.pdf">Resume</a>
     </div>
   </div>
 
@@ -35,12 +37,48 @@
 
   <div id="projects">
     <h2>Projects</h2>
-    <!-- More content here -->
-  </div>
+    <div class="projects-wrapper">
+        <div class="project-item">
+            <img src="../Final-project/images/coverpage.png" alt="project cover page" class="project-image">
+            <div class="project-text">Project 1</div>
+        </div>
+        <div class="project-item">
+            <img src="../Final-project/images/coverpage.png" alt="project cover page" class="project-image">
+            <div class="project-text">Project 2</div>
+        </div>
+        <div class="project-item">
+            <img src="../Final-project/images/coverpage.png" alt="project cover page" class="project-image">
+            <div class="project-text">Project 3</div>
+        </div>
+    </div>
+</div>
+  
 
   <div id="contact">
     <h2>Contact</h2>
-    <!-- More content here -->
+    <h3>Get In Touch</h3>
+    <div id="rectangle1"></div>
+    <h4>Message:</h4>
+    <h5>mmid021120@andrew.cmu.edu</h5>
+    <div id="rectangle2"></div>
+    
+    <div id="mianPageLinks">
+    <div class="instagram">
+      <a href="https://www.instagram.com/mm.industrial.design/" target="_blank">
+        <img src="../Final-project/images/ig.png" alt="instagram link">
+      </a>
+    </div>
+    <div class="behence">
+      <a href="https://www.behance.net/kema20mmid" target="_blank">
+        <img src="../Final-project/images/be.png" alt="behence link">
+      </a>
+    </div>
+    <div class="linkedin">
+      <a href="https://www.linkedin.com/in/mark-ma-design" target="_blank">
+        <img src="../Final-project/images/linked.png" alt="Linkedin Link">
+      </a>
+    </div>
+  </div>
   </div>
 </section>
 

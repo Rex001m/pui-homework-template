@@ -53,6 +53,7 @@ body {
     font-size: 8rem;
     font-weight: bold;
     color: #333;
+    text-decoration: none; 
 }
   
 #startDescription {
@@ -81,31 +82,40 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #DCDCDC;
-  color: white;
+  /* background-color: #DCDCDC;
+  color: white; */
   display: flex;
   justify-content: space-between; 
   align-items: center;  
   padding: 10px 20px;  
+  height: 100px;
   z-index: 1000;  /* Make sure the top bar stays on top of other content */
+  color: white;
+  text-decoration: none;
 }
 
 #logo {
   height: 40px; 
   width: auto;
+  text-decoration: none; 
 }
 
-#topBarLinks {
+.topBarLinks a{
+  text-decoration: none;
+  color: #777;
+}
+
+.topBarLinks {
   display: flex;
   gap: 20px; 
-  color: white;
-  text-decoration: none;
+  text-decoration: none!important;
   font-size: 1rem;
   font-weight: 600;
+  color: white;
 }
 
-#topBarLinks a:hover {
-  text-decoration: none;
+.topBarLinks :hover {
+  text-decoration: none!important;
   color:black
 }
 
@@ -119,8 +129,10 @@ html {
   justify-content: center;
   align-items: center;
   margin: 20%;
+  margin-top: 1800px;
   font-size: 3.5rem;
 }
+
 /* about section styles */
 #profilePage{
   display: flex;
@@ -148,6 +160,142 @@ html {
 
 #writeUp{
   font-size: 25px;
-  margin-top: 20px;
+  width: 550px;
+}
+
+/* Project Selction Style*/
+#projects {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;        
+  gap: 20px;                 
+  flex-wrap: wrap;            
+  margin-top: 100px;
+}
+
+#projects h2 {
+  display: flex; 
+  justify-content: left; 
+  width: 100%;                  
+  margin-bottom: 20px;   
+  margin-left: 21%;      
+}
+
+.project-image {
+  width: 250px;     
+  height: auto;  
+  margin-bottom: 100px; 
+  display: block;
+  transition: transform 0.3s ease;    
+  border-radius: 30px;          
+}
+
+.project-item {
+  position: relative;        
+}
+
+.project-text {
+  position: absolute;    
+  top: 50%;                 
+  left: 50%;                 
+  transform: translate(-50%, -50%); 
+  color: white;             
+  font-size: 18px;            
+  font-weight: bold;          
+  opacity: 0;                 /* Hide the text initially */
+  visibility: hidden;         /* Hide the text initially */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.1);      /* Optional: zooms the image on hover */
+}
+
+.project-item:hover .project-text {
+  opacity: 1;                 /* Show the text when hovering */
+  visibility: visible;        /* Make text visible */
+}
+
+
+/* Contact section styles */
+#contact {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;        
+  gap: 20px;                 
+  flex-wrap: wrap;       
+  flex-direction: column;
+}
+
+#contact h2 {
+  display: flex; 
+  justify-content: left; 
+  width: 100%;                  
+  margin-left: 21%;      
+}
+
+#contact h3 {
+  display: flex; 
+  justify-content: left; 
+  font-size: 100px;            
+  font-weight: bold; 
+  margin-left: -35%;
+}
+
+#rectangle1{
+  width:350px;
+  height:10px;
+  background:gray;
+  transform: translate(15px,-60px); 
+  border-radius: 30px;
+}
+
+#contact h4{
+  display: flex; 
+  justify-content: left; 
+  font-size: 20px;            
+  font-weight: bold; 
+  transform: translate(-110px,-80px); 
+}
+
+
+#contact h5{
+  font-size: 20px;            
+  font-weight: bold; 
+  transform: translate(-8px,-150px); 
+}
+
+#rectangle2{
+  width:350px;
+  height:10px;
+  background:gray;
+  border-radius: 30px;
+  transform: translate(-370px,-150px); 
+}
+
+#contact img{
+  max-width: 10%;
+  height: auto;
+}
+.instagram{
+  transform: translate(110px,-100px); 
+}
+
+.behence{
+  transform: translate(160px,-153.5px); 
+}
+
+.linkedin{
+  transform: translate(215px,-204px); 
+  max-width: 82%;
+  height: auto;
+} 
+
+/* Resume Styling */
+
+#resume{
+ display: flex;
+ justify-content: center;     
+ align-items: center;   
 }
 
