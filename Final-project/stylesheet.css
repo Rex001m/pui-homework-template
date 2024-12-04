@@ -134,6 +134,10 @@ html {
 }
 
 /* about section styles */
+#about{
+  margin-top:2500px ;
+}
+
 #profilePage{
   display: flex;
   justify-content: center;
