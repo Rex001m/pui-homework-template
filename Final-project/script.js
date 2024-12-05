@@ -22,7 +22,30 @@ if (window.location.href.endsWith('index.html')) {
   //Update speed
   let loadingInterval = setInterval(updateLoadingScreen, 20);
 }
-//Import GSAP library
+
+
+// Hover interaction for profileDescription
+const profileDescription = document.getElementById("profileDescription");
+
+profileDescription.addEventListener("mouseenter", () => {
+  gsap.to("#profileDescription > *", {
+    scale: 1.05,
+    color: "#ac8958",
+    duration: 0.3,
+    stagger: 0.1,
+    ease: "power2.out",
+  });
+});
+
+profileDescription.addEventListener("mouseleave", () => {
+  gsap.to("#profileDescription > *", {
+    scale: 1,
+    color: "#333",
+    duration: 0.3,
+    stagger: 0.1,
+    ease: "power2.out",
+  });
+});
 
 // Hover animation using GSAP
 mainVision.addEventListener("mouseenter", () => {
@@ -40,3 +63,18 @@ mainVision.addEventListener("mouseleave", () => {
     ease: "power2.in"
   });
 });
+
+
+//Project gallery effect//
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
