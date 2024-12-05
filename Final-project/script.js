@@ -66,15 +66,28 @@ mainVision.addEventListener("mouseleave", () => {
 
 
 //Project gallery effect//
-let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
 
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
+next.addEventListener('click', moveNext);
+prev.addEventListener('click', movePrev);
 
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-})
+// Define the next and previous movement functions
+function moveNext() {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.slide').appendChild(items[0]);
+}
+
+function movePrev() {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.slide').prepend(items[items.length - 1]);
+}
+
+// Add keyboard navigation
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowRight') {
+        moveNext(); 
+    } else if (event.key === 'ArrowLeft') {
+        movePrev(); 
+    }
+});
