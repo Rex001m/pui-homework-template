@@ -87,7 +87,7 @@ body {
 
 body {
   margin: 0;
-  padding-top: 60px; /* Add space for the fixed top bar */
+  padding-top: 60px; 
 }
 
 /* Top bar styles */
@@ -155,9 +155,6 @@ html {
 #about{
   margin-top:2300px ;
   margin-bottom: 200px;
-  /* padding-top: 50px; 
-  padding-bottom: 50px;
-  margin-top: 0; */
 }
 
 #profilePage {
@@ -324,14 +321,6 @@ html {
   opacity: 0;
   animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
-
-/* .content button{
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0;
-  animation: animate 1s ease-in-out 0.6s 1 forwards;
-} */
 
 
 @keyframes animate {

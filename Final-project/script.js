@@ -167,3 +167,37 @@ gsap.timeline({
     { opacity: 0, scale: 0.9, duration: 1 }
   )
 
+// Add ScrollTrigger between About and Project
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate the section items
+const animateProjects = () => {
+  gsap.fromTo(
+    "#projects .item",
+    {
+      opacity: 0, 
+      scale: 0.5, 
+      x: () => Math.random() * 100 - 50, // Random horizontal offset
+      y: () => Math.random() * 100 - 50, // Random vertical offset
+    },
+    {
+      opacity: 1,
+      scale: 1, 
+      x: 0, 
+      y: 0, 
+      duration: 2, 
+      stagger: 0.2, 
+      ease: "power3.out", 
+      clearProps: "all", 
+    }
+  );
+};
+
+ScrollTrigger.create({
+  trigger: "#projects", 
+  start: "top center", 
+  onEnter: animateProjects, 
+  onLeaveBack: animateProjects, 
+});
+
+
