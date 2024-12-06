@@ -65,3 +65,4 @@ window.addEventListener('keydown', (event) => {
 
     updateGallery(currentIndex);
 });
+
