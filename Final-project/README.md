@@ -73,7 +73,7 @@ Copy all the content under the [ChatGPT Usage](#chatgpt-usage) section to answer
 
 ---
 
-# **FP3 \- Final Project Check-in**
+<!-- # **FP3 \- Final Project Check-in**
 
 Document the changes and progress of your project. How have you followed or changed your implementation & GenAI use plan and why? Remember to commit your code to save your progress.
 
@@ -89,7 +89,7 @@ Document the changes and progress of your project. How have you followed or chan
 
 Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-generative-ai-use-and-reflection).
 
----
+--- -->
 
 # **FP2 \- Evaluation of the Final project**
 
