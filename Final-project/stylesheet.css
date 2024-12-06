@@ -148,11 +148,13 @@ html {
   margin: 20%;
   font-size: 3.5rem;
   color: #1b1b1b;
+  opacity: 1;
 }
 
 /* about section styles */
 #about{
-  margin-top:2100px ;
+  margin-top:2300px ;
+  margin-bottom: 200px;
   /* padding-top: 50px; 
   padding-bottom: 50px;
   margin-top: 0; */
@@ -173,7 +175,7 @@ html {
   transition: color 0.3s ease;
 }
 #mainVision .word:hover {
-  color: #ac8958; /* Highlight hovered word */
+  color: #adf894; /* Highlight hovered word */
 }
 
 #profilePic {
@@ -193,14 +195,6 @@ html {
 #profileDescription {
   text-align: left;
   max-width: 400px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 50vh;
-  max-height: 300vh; 
-  height: auto; 
-  margin: 0; 
-  padding: 20px; */
 }
 
 #profileName {
