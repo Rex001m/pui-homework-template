@@ -185,7 +185,7 @@ const animateProjects = () => {
       scale: 1, 
       x: 0, 
       y: 0, 
-      duration: 2, 
+      duration: 1.5, 
       stagger: 0.2, 
       ease: "power3.out", 
       clearProps: "all", 
@@ -200,4 +200,29 @@ ScrollTrigger.create({
   onLeaveBack: animateProjects, 
 });
 
+
+//Cube Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const cube = document.querySelector("#contact .cube");
+
+  if (cube) {
+    // Rotation animation
+    gsap.to(cube, {
+      duration: 6,
+      rotateX: 360,
+      rotateY: 360,
+      repeat: -1,
+      ease: "power1.inOut",
+    });
+
+    // Floating animation
+    gsap.to(cube, {
+      duration: 2,
+      y: "-=20",
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut",
+    });
+  }
+});
 
