@@ -1,29 +1,3 @@
-// // Check if the current URL matches the target URL
-// if (window.location.href.endsWith('index.html')) {
-//   console.log(window.location.href)
-
-//   // Function to simulate the loading progress
-//   let currentProgress = 0;
-//   let loadingText = document.getElementById("loading-text");
-//   let loadingScreen = document.getElementById("loading-screen");
-//   let startIcon = document.getElementById("startIcon");
-
-//   // Function loading screen
-//   function updateLoadingScreen() {
-//     if (currentProgress <= 100) {
-//       loadingText.textContent = currentProgress + "%";
-//       currentProgress++;
-//     } else {
-//       // Hide loading screen and show the main content
-//       loadingScreen.style.display = "none";
-//       startIcon.style.display = "block";
-//     }
-//   }
-//   //Update speed
-//   let loadingInterval = setInterval(updateLoadingScreen, 20);
-// }
-
-
 // Hover interaction for profileDescription
 const profileDescription = document.getElementById("profileDescription");
 
@@ -91,3 +65,24 @@ document.addEventListener('keydown', function (event) {
         movePrev(); 
     }
 });
+
+
+//logo links
+
+const logoLink = document.querySelector('#topBar a');
+
+// Check if the current page is `mainpage.html`
+if (window.location.pathname.includes('mainpage.html')) {
+    // If on mainpage.html, make the logo smooth scroll to the top
+    const logo = document.getElementById('logo');
+    
+    logo.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Scroll to the top of the page with smooth scroll
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
