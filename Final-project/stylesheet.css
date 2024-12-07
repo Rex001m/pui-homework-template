@@ -189,6 +189,7 @@ html {
 #profileDescription {
   text-align: left;
   max-width: 400px;
+  color: #121212;
 }
 
 #profileName {
