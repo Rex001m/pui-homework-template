@@ -4,7 +4,7 @@ const totalImages = galleryItems.length;
 const currentIndexDisplay = document.getElementById('currentIndex');
 const totalImagesDisplay = document.getElementById('totalImages');
 let currentIndex = 0;
-let isScrolling = false; // Lock to prevent overscrolling
+let isScrolling = false; 
 
 // Initialize the total number of images
 totalImagesDisplay.textContent = totalImages;
@@ -22,12 +22,12 @@ function updateGallery(index) {
     });
 
     // Update the current index display
-    currentIndexDisplay.textContent = index + 1; // +1 to make it human-readable
+    currentIndexDisplay.textContent = index + 1; 
 }
 
 // Scroll handler
 window.addEventListener('wheel', (event) => {
-    if (isScrolling) return; // Prevent multiple scrolls during animation
+    if (isScrolling) return;
     isScrolling = true;
 
     if (event.deltaY > 0) {
@@ -35,8 +35,6 @@ window.addEventListener('wheel', (event) => {
     } else if (event.deltaY < 0) {
         currentIndex = (currentIndex - 1 + totalImages) % totalImages;
     }
-
-    // Update gallery
     updateGallery(currentIndex);
     setTimeout(() => {
         isScrolling = false;
@@ -55,7 +53,7 @@ updateGallery(currentIndex);
 
 // Keyboard handler for arrow keys
 window.addEventListener('keydown', (event) => {
-    if (isScrolling) return; // Prevent multiple key presses during animation
+    if (isScrolling) return; 
 
     if (event.key === "ArrowDown") {
         currentIndex = (currentIndex + 1) % totalImages;
