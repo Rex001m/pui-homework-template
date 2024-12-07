@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({
       top: document.getElementById("projects").offsetTop,
       behavior: "smooth",
-      top:1300,
+      top:1350,
     });
   });
 
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Hover interaction for profileDescription
 const profileDescription = document.getElementById("profileDescription");
-  
+
 profileDescription.addEventListener("mouseenter", () => {
   gsap.to("#profileDescription > *", {
     scale: 1.05,
