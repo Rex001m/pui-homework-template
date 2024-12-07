@@ -14,7 +14,7 @@ The purpose of my portfolio website is to showcase my skills, creativity, and pr
 
 The website is designed for a diverse audience, including design professionals, recruiters, clients, and peers in the design industry. It provides detailed information about my design philosophy, portfolio projects, and technical skills. Additionally, contact information and links to my other media are also included for people get to know me better.
 
-The website is crafted to be visually compelling, with a modern and clean design that reflects my style as a designer. Interactive elements, animations, and seamless navigation make the browsing experience engaging and intuitive. High-quality visuals, descriptive narratives, and a responsive design ensure visitors stay captivated while exploring my work, leaving them with a strong impression of my capabilities.
+The website is crafted to be visually compelling, with a modern and clean design that reflects my style as a designer. Interactive elements, animations, and seamless navigation make the browsing experience engaging and intuitive. High-quality visuals, descriptive narratives, and a responsive design ensure visitors stay captivated while exploring my work.
 
 
 ## Part 2: User Interaction
@@ -22,7 +22,8 @@ The website is crafted to be visually compelling, with a modern and clean design
 How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
 
 1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. 
+2. Clickable button on index.html, the loading page. This button brings you to the main page
+3. 
 
 ## Part 3: External Tool
 
