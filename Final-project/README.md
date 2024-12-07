@@ -10,10 +10,12 @@ Please sign up for the study at [https://tinyurl.com/pui-study](https://tinyurl.
 
 Describe your website (300 words).
 
-* What is the purpose of your website?   
-* Who is the target audience?  
-* What information do you convey with your website?   
-* How is it interesting and engaging? 
+The purpose of my portfolio website is to showcase my skills, creativity, and professional projects as an industrial designer. By curating and presenting my work in an organized and visually engaging manner, the website acts as a digital resume and an extension of my professional identity. Additionally, it aims to attract potential clients, employers, collaborators, and design enthusiasts while offering an interactive glimpse into my creative process.
+
+The website is designed for a diverse audience, including design professionals, recruiters, clients, and peers in the design industry. It provides detailed information about my design philosophy, portfolio projects, and technical skills. Additionally, contact information and links to my other media are also included for people get to know me better.
+
+The website is crafted to be visually compelling, with a modern and clean design that reflects my style as a designer. Interactive elements, animations, and seamless navigation make the browsing experience engaging and intuitive. High-quality visuals, descriptive narratives, and a responsive design ensure visitors stay captivated while exploring my work, leaving them with a strong impression of my capabilities.
+
 
 ## Part 2: User Interaction
 
