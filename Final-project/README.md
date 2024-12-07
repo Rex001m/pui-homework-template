@@ -36,7 +36,10 @@ How a user would interact with your website? For each step, briefly but clearly 
 12. clickable "see more" button on the product gallery that brings you to view the project details
 13. Number element on the project page shows you the current image out of the total
 15. preview element on the left (at the bottom for smaller screen) for users to move faster and skip pages
-16. clickable "instagram","behance",
+16. clickable "instagram","behance", and "linkedin" buttons on the main page brings you to reletive sites.
+17. clickable email on the mainpage brings you to write a email to me. 
+18. clickable phone number on the mainpage brings you to call me. 
+19. back to top button on the main page brings users back to the top, avoiding scrolling
 
 
 ## Part 3: External Tool
