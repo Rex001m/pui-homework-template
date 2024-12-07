@@ -31,65 +31,74 @@ How a user would interact with your website? For each step, briefly but clearly 
 7. Hover effect on the vision statement in the main page for interaction
 8. Fade in effect and hover effect in the main page for interaction (it also changes text color)
 9. Project gallery on the main page allows user to quickly go through my projects.
-10. left and right buttons to controll the gallery
-11. keyboard function, left and right key also also the navigation.
-12. clickable "see more" button on the product gallery that brings you to view the project details
+10. Left and right buttons to controll the gallery
+11. Keyboard function, left and right key also also the navigation.
+12. Clickable "see more" button on the product gallery that brings you to view the project details
 13. Number element on the project page shows you the current image out of the total
-15. preview element on the left (at the bottom for smaller screen) for users to move faster and skip pages
-16. clickable "instagram","behance", and "linkedin" buttons on the main page brings you to reletive sites.
-17. clickable email on the mainpage brings you to write a email to me. 
-18. clickable phone number on the mainpage brings you to call me. 
-19. back to top button on the main page brings users back to the top, avoiding scrolling
+14. Preview element on the left (at the bottom for smaller screen) for users to move faster and skip pages
+15. Clickable "instagram","behance", and "linkedin" buttons on the main page brings you to reletive sites.
+16. Clickable email on the mainpage brings you to write a email to me. 
+17. Clickable phone number on the mainpage brings you to call me. 
+18. Back to top button on the main page brings users back to the top, avoiding scrolling
 
 
 ## Part 3: External Tool
 
 Describe what important external tool you used (JavaScript library, Web API, animations, or other). Following the bulleted list format below, reply to each of the prompts.
 
-1. Name of tool1  
-   * Why did you choose to use it over other alternatives? (2 sentences max)  
-   * How you used it? (2 sentences max)  
-   * What does it add to your website? (2 sentences max)  
-2. Name of tool2
+
+1. GSAP
+
+   I am amazed by this library. I used it for many design elments. I especially used scroll trigger which allows me to add cool transition animations to my page in between sections. I have also used it to enhance my design elements, for example, the rotating cube. This libaray pushes the overall experience on my portfolio and made it more appealing for users to review. 
+
+2. cdnjs:
+
+   I was exploring different ways to accomplish things. This libaray allows me to use icons in your project without downloading and hosting the files yourself. I used it on my project gallery section for my left and right clickable buttons.
+
+
 
 ## Part 4: Design Iteration
 
-Describe how you iterated on your prototypes, if at all, including any changes you made to your original design while you were implementing your website and the rationale for the changes. (4-8 sentences max)
+During the development of my website, I iterated on my prototypes extensively, incorporating feedback from friends after each major update. Their insights helped me identify usability and accessibility issues that I might have overlooked. For example, I initially planned to organize the project gallery into different categories, but I realized that requiring users to click through multiple sections to view my work was cumbersome and inefficient. Additionally, I adjusted the layout and navigation to ensure it was intuitive and user-friendly, improving accessibility for a wider audience. I also re-evaluated color contrasts, text readability, and button placements based on feedback to create a cleaner, more cohesive design. 
 
 ## Part 5: Implementation Challenge
 
-What challenges did you experience in implementing your website? (2-4 sentences max)
+One of the biggest challenges I faced while implementing my website was using GSAP (GreenSock Animation Platform), as I had never worked with it before. Learning how to integrate GSAP animations and troubleshoot issues like animations not firing correctly or conflicting with other CSS transitions was difficult. Debugging these problems proved to be challenging, especially when the animations didn’t behave as expected. I had to dive deep into the GSAP documentation and experiment with different approaches to figure out how to best use its features.
 
 ## Part 6: Generative AI Use and Reflection
 
 Describe how you used Generative AI tools to create this final project (a page max, \~500 words).
 
 ### ChatGPT Usage
-* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that …  
-* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that …  
-* I critiqued/evaluated the generated suggestions before incorporation by … For example, this tool once suggested … but I modified/rejected the suggestion because …  
-* I accepted the generations when … This tool did/did not influence my final design and implementation plan because … For example, this tool once suggested … and I adjusted my design according to the suggestion because … 
-* The pros and cons of using this Generative AI tool: …
+For my final project, I used Generative AI tools to enhance various aspects of the development process, and overall, they were incredibly helpful in meeting my expectations and the plans I outlined in [FP2]. In the initial stages, I was able to work efficiently. However, as the project neared completion, I ran out of time and decided to ask the AI to write more advanced pieces of code for me, such as GSAP ScrollTrigger animations, to save time. 
+
+Often times the AI-generated code provided a solid starting point, it did not match my expectations entirely. I had to adjust various aspects of the code, especially when it came to timing and spacing. For example, the animations didn’t always match the smooth transitions I had in mind, and the spacing between elements didn’t align perfectly with my design. I realized that while the AI is great at providing possible solutions, there’s always a need for further refinement. It’s a powerful tool that helped accelerate my workflow, but I couldn’t rely on it entirely without making manual adjustments to fine-tune the result. Despite these challenges, the AI made a huge difference in allowing me to implement advanced features that I wouldn’t have been able to code from scratch in the limited time. Ultimately, the tool helped streamline many parts of the project, but I still had to apply my own design knowledge and critical thinking to ensure everything aligned with my vision.
 
 ***Usage Experiences by Project Aspects***
 
 | Ratings | design | plan | write code | debug | \_ (other?) |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Usage<sup>1</sup> | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … |
-| Reduce/Improve Productivity<sup>2</sup> | \[rating\] because … | \[rating\] because … | \[rating\] because … | \[rating\] because … | \[rating\] because … |
+| Usage<sup>1</sup> | No because as as a designer, I dont think it can do beter | no because there is not need | yes because it can be inspiring sometimes | yes because it is very good at it. Much faster then me | no |
+| Reduce/Improve Productivity<sup>2</sup> | 1| 1 | 5, because it knows codes like the libaraies better. |7, it works a lot faster | no|
 
 [1] I used / did not use this tool for X aspect of the project because …  
 [2] This tool makes my productivity for X aspect (1-Much Reduced, 2-Reduced, 3-Slightly Reduced, 4-Not Reduced nor Improved, 5-Slightly Improved, 6-Improved, 7-Much Improved)
 
 ***Prompts and Chat History Links***
 
-Attach all the prompts you’ve used (e.g., for ChatGPT you can anonymously [share](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq) your chat history).
+I did not save or document every individual task or prompt used during the development process. However, I did regularly use ChatGPT to assist with debugging and to generate complex code when I encountered challenges that I couldn’t solve on my own. For example, I used ChatGPT to help me implement the GSAP library and its ScrollTrigger feature, as I was unfamiliar with its syntax and integration. When I hit roadblocks or needed a more efficient way to approach a problem, I turned to the AI for guidance. The tool was invaluable in providing solutions, but I only relied on it when necessary, ensuring that I still understood the logic and made adjustments where needed to fit my design and functionality requirements.
 
 
-### Add more subsections for the GenAI tools you've used, e.g., Copilot, etc.
+***Wave Screenshots***
 
-Copy all the content under the [ChatGPT Usage](#chatgpt-usage) section to answer the same questions for this tool.
+I attempted to fix the contrast issue and ensured that it was visually corrected. However, I believe the testing tool is unable to properly recognize the images, which is likely why it is flagging multiple errors.
 
+![Wace test Screenshots](./images/wave/1.png)
+![Wace test Screenshots](./images/wave/2.png)
+![Wace test Screenshots](./images/wave/3.png)
+![Wace test Screenshots](./images/wave/4.png)
+![Wace test Screenshots](./images/wave/5.png)
+![Wace test Screenshots](./images/wave/6.png)
 
 ---
 
