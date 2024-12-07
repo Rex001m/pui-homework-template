@@ -21,9 +21,23 @@ The website is crafted to be visually compelling, with a modern and clean design
 
 How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
 
-1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. Clickable button on index.html, the loading page. This button brings you to the main page
-3. 
+
+1. Clickable button on index.html, the loading page. This button brings you to the main page
+2. A top bar that always stays on top of the page for users to navigate
+3. Clickable Logo on the top left corner, this is in every page but not the loading page. To insure user can also navigate back to the top of the main page
+4. Clickable Navigation links on the top right, in the main page, helps you navigate inside the main page.
+5. Clickable Resume button, on the top right of the main page. It brings you to view my resume.
+6. Scrollable main page with unique transitions between each sections. 
+7. Hover effect on the vision statement in the main page for interaction
+8. Fade in effect and hover effect in the main page for interaction (it also changes text color)
+9. Project gallery on the main page allows user to quickly go through my projects.
+10. left and right buttons to controll the gallery
+11. keyboard function, left and right key also also the navigation.
+12. clickable "see more" button on the product gallery that brings you to view the project details
+13. Number element on the project page shows you the current image out of the total
+15. preview element on the left (at the bottom for smaller screen) for users to move faster and skip pages
+16. clickable "instagram","behance",
+
 
 ## Part 3: External Tool
 
